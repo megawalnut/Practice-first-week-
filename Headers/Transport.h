@@ -5,7 +5,7 @@
 class Transport {
 private:
 	static int m_for_id;	//для уникальности
-	int m_unique_id;			//уникальный id
+	int m_unique_id;		//уникальный id
 	std::string m_type;		//тип транспортного средства
 	std::string m_brand;	//марка
 	std::string m_model;	//модель

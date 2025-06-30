@@ -4,7 +4,8 @@
 
 class Boat : public Transport {
 	private:
-
+		double m_lengthBoat;	//длина судна
+		double m_widthBoat;		//ширина судна
 
 	public:
 		//конструктор
@@ -21,4 +22,14 @@ class Boat : public Transport {
 		//деструктор
 		~Boat() = default;
 		
+		//get
+		int get_lengthBoat() const;
+		double get_widthBoat() const;
+		
+		//set
+		void set_lengthBoat(double lengthBoatTrans);
+		void set_widthBoat(double widthBoatTrans);
+
+		//информация об объекте
+		void info() const override;
 };

@@ -3,6 +3,10 @@
 #include "Transport.h"
 
 class Spaceship : public Transport {
+	private:
+		double m_maxSpeed;		//макс. скорость км/c
+		double m_hyperjumpRange;	//дальность гиперпрыжка(а.е.)
+
 	public:
 		//конструктор
 		Spaceship(const std::string& brandTrans, 
@@ -17,5 +21,15 @@ class Spaceship : public Transport {
 		Spaceship& operator=(Spaceship&& other) noexcept;
 		//деструктор
 		~Spaceship() = default;
-	
+			
+		//get
+		double get_maxSpeed() const;
+		double get_hyperjumpRange() const;
+		
+		//set
+		void set_maxSpeed(double maxSpeedTrans);
+		void set_hyperjumpRange(double hyperjumpRangeTrans);
+
+		//информация об объекте
+		void info() const override;
 };

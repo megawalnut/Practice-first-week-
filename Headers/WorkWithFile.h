@@ -17,5 +17,5 @@ class WorkWithfile {
 		//запись
 		void in(const std::string& str);
 		//чтение
-		std::vector<std::string> out();
+		std::vector<std::string> out(); 
 };
