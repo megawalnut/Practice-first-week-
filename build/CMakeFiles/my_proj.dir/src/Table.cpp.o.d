@@ -203,7 +203,12 @@ CMakeFiles/my_proj.dir/src/Table.cpp.o: \
  /usr/include/c++/15.1.1/bits/codecvt.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.1.1/bits/fstream.tcc \
+ /usr/include/c++/15.1.1/bits/fstream.tcc /usr/include/c++/15.1.1/map \
+ /usr/include/c++/15.1.1/bits/stl_tree.h \
+ /usr/include/c++/15.1.1/bits/node_handle.h \
+ /usr/include/c++/15.1.1/bits/stl_map.h \
+ /usr/include/c++/15.1.1/bits/stl_multimap.h \
+ /usr/include/c++/15.1.1/bits/erase_if.h \
  /usr/include/c++/15.1.1/algorithm \
  /usr/include/c++/15.1.1/bits/stl_algo.h \
  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
@@ -220,12 +225,7 @@ CMakeFiles/my_proj.dir/src/Table.cpp.o: \
  /usr/include/libintl.h \
  /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/15.1.1/bits/locale_conv.h \
- /usr/include/c++/15.1.1/bits/quoted_string.h /usr/include/c++/15.1.1/map \
- /usr/include/c++/15.1.1/bits/stl_tree.h \
- /usr/include/c++/15.1.1/bits/node_handle.h \
- /usr/include/c++/15.1.1/bits/stl_map.h \
- /usr/include/c++/15.1.1/bits/stl_multimap.h \
- /usr/include/c++/15.1.1/bits/erase_if.h \
+ /usr/include/c++/15.1.1/bits/quoted_string.h \
  /usr/include/c++/15.1.1/functional \
  /usr/include/c++/15.1.1/bits/std_function.h \
  /usr/include/c++/15.1.1/unordered_map \
@@ -233,4 +233,9 @@ CMakeFiles/my_proj.dir/src/Table.cpp.o: \
  /usr/include/c++/15.1.1/bits/hashtable.h \
  /usr/include/c++/15.1.1/bits/hashtable_policy.h \
  /usr/include/c++/15.1.1/bits/enable_special_members.h \
- /usr/include/c++/15.1.1/array /usr/include/c++/15.1.1/stdlib.h
+ /usr/include/c++/15.1.1/array \
+ /home/mike/my_projects/project_1/Headers/Car.h \
+ /home/mike/my_projects/project_1/Headers/Boat.h \
+ /home/mike/my_projects/project_1/Headers/Helicopter.h \
+ /home/mike/my_projects/project_1/Headers/Spaceship.h \
+ /usr/include/c++/15.1.1/stdlib.h

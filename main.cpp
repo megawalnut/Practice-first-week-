@@ -58,7 +58,7 @@ int main()
 			if (typeTrans == "Car" ||
 				typeTrans == "Boat" ||
 				typeTrans == "Helicopter" ||
-				typeTrans == "CaSpaceshipr") 
+				typeTrans == "Spaceship") 
 			{
 				std::string brandTrans;
 				std::string modelTrans;
@@ -162,7 +162,7 @@ int main()
 			std::cout << "0: Выход" << std::endl;
 
 			int for_find = -1;
-			while (for_find < 0 || for_find > 8)
+			while (for_find < 0 || for_find > 7)
 				std::cin >> for_find;
 
 			if (for_find != 0)

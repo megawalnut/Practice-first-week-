@@ -66,64 +66,174 @@ Table::Table()
     };
     sortMap =
     {
-        { 0, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_id()     < b->get_id();     });} },
-        { 1, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_type()   < b->get_type();   });} },
-        { 2, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_brand()  < b->get_brand();  });} },
-        { 3, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_model()  < b->get_model();  });} },
-        { 4, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_year()   < b->get_year();   });} },
-        { 5, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_weight() < b->get_weight(); });} },
-        { 6, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_owners() < b->get_owners(); });} },
-        { 7, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_mileage() < b->get_mileage(); });} },
-        { 8, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_lengthBoat() < b->get_lengthBoat(); });} },
-        { 9, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_widthBoat() < b->get_widthBoat(); });} },
-        { 10, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_capacity() < b->get_capacity(); });} },
-        { 11, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_enginePower() < b->get_enginePower(); });} },
-        { 12, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_maxSpeed() < b->get_maxSpeed(); });} },
-        { 13, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_hyperjumpRange() < b->get_hyperjumpRange(); });} },
+        { 0, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                return a->get_id() < b->get_id();     
+            });} },
+        { 1, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                return a->get_type() < b->get_type();   
+            });} },
+        { 2, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                return a->get_brand() < b->get_brand();  
+            });} },
+        { 3, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                return a->get_model() < b->get_model();  
+            });} },
+        { 4, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                return a->get_year() < b->get_year();   
+            });} },
+        { 5, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                return a->get_weight() < b->get_weight(); 
+            });} },
+        { 6, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Car* first = dynamic_cast<Car*>(a.get());
+                Car* second = dynamic_cast<Car*>(a.get());
+                return first->get_owners() < second->get_owners(); 
+            });} },
+        { 7, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Car* first = dynamic_cast<Car*>(a.get());
+                Car* second = dynamic_cast<Car*>(a.get());
+                return first->get_mileage() < second->get_mileage(); 
+            });} },
+        { 8, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Boat* first = dynamic_cast<Boat*>(a.get());
+                Boat* second = dynamic_cast<Boat*>(a.get());
+                return first->get_lengthBoat() < second->get_lengthBoat(); 
+            });} },
+        { 9, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Boat* first = dynamic_cast<Boat*>(a.get());
+                Boat* second = dynamic_cast<Boat*>(a.get());
+                return first->get_widthBoat() < second->get_widthBoat(); 
+            });} },
+        { 10, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Helicopter* first = dynamic_cast<Helicopter*>(a.get());
+                Helicopter* second = dynamic_cast<Helicopter*>(a.get());
+                return first->get_capacity() < second->get_capacity(); 
+            });} },
+        { 11, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Helicopter* first = dynamic_cast<Helicopter*>(a.get());
+                Helicopter* second = dynamic_cast<Helicopter*>(a.get());
+                return first->get_enginePower() < second->get_enginePower(); 
+            });} },
+        { 12, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Spaceship* first = dynamic_cast<Spaceship*>(a.get());
+                Spaceship* second = dynamic_cast<Spaceship*>(a.get());
+                return first->get_maxSpeed() < second->get_maxSpeed(); 
+            });} },
+        { 13, [&](){
+            std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) 
+            { 
+                Spaceship* first = dynamic_cast<Spaceship*>(a.get());
+                Spaceship* second = dynamic_cast<Spaceship*>(a.get());
+                return first->get_hyperjumpRange() < second->get_hyperjumpRange(); 
+            });} },
     };
     findMap =
     {
         { 0, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_id() == atoi(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { return a->get_id() == atoi(edit.c_str()); }); } 
         },
         { 1, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_type() == edit; }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { return a->get_type() == edit; }); } 
         },
         { 2, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_brand() == edit; }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { return a->get_brand() == edit; }); } 
         },
         { 3, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_model() == edit; }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { return a->get_model() == edit; }); } 
         },
         { 4, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_year() == atoi(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { return a->get_year() == atoi(edit.c_str()); }); } 
         },
         { 5, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ){ return a->get_weight() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a)
+                { return a->get_weight() == atof(edit.c_str()); }); } 
         },
         { 6, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_owners() == atoi(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Car* first = dynamic_cast<Car*>(a.get());
+                    return first->get_owners() == atoi(edit.c_str()); 
+                }); } 
         },
         { 7, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_mileage() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Car* first = dynamic_cast<Car*>(a.get());
+                    return first->get_mileage() == atof(edit.c_str()); 
+                }); } 
         },
         { 8, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_lengthBoat() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Boat* first = dynamic_cast<Boat*>(a.get());
+                    return first->get_lengthBoat() == atof(edit.c_str()); 
+                }); } 
         },
         { 9, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_widthBoat() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Boat* first = dynamic_cast<Boat*>(a.get());
+                    return first->get_widthBoat() == atof(edit.c_str()); 
+                }); } 
         },
         { 10, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_capacity() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Helicopter* first = dynamic_cast<Helicopter*>(a.get());
+                    return first->get_capacity() == atof(edit.c_str()); 
+                }); } 
         },
         { 11, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_enginePower() == atoi(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Helicopter* first = dynamic_cast<Helicopter*>(a.get());
+                    return first->get_enginePower() == atoi(edit.c_str()); 
+                }); } 
         },
         { 12, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_maxSpeed() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Spaceship* first = dynamic_cast<Spaceship*>(a.get());
+                    return first->get_maxSpeed() == atof(edit.c_str()); 
+                }); } 
         },
         { 13, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_hyperjumpRange() == atof(edit.c_str()); }); } 
+            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [&edit](const auto &a) 
+                { 
+                    Spaceship* first = dynamic_cast<Spaceship*>(a.get());
+                    return first->get_hyperjumpRange() == atof(edit.c_str()); 
+                }); } 
         }
     };
     saveMap =
@@ -131,33 +241,33 @@ Table::Table()
         {"Car", [](Transport* t, std::string& result)
             { 
                 Car* c = dynamic_cast<Car*>(t);
-                result += c->get_owners();
+                result += std::to_string(c->get_owners());
                 result += " ";
-                result += c->get_mileage();
+                result += std::to_string(c->get_mileage());
                 return result;
             } },
         {"Boat", [](Transport* t, std::string& result)
             { 
                 Boat* b = dynamic_cast<Boat*>(t);
-                result += b->get_lengthBoat();
+                result += std::to_string(b->get_lengthBoat());
                 result += " ";
-                result += b->get_widthBoat();
+                result += std::to_string(b->get_widthBoat());
                 return result;
             } },
         {"Helicopter", [](Transport* t, std::string& result)
             { 
                 Helicopter* h = dynamic_cast<Helicopter*>(t);
-                result += h->get_capacity();
+                result += std::to_string(h->get_capacity());
                 result += " ";
-                result += h->get_enginePower();
+                result += std::to_string(h->get_enginePower());
                 return result;
             } },
         {"Spaceship", [](Transport* t, std::string& result)
             { 
                 Spaceship* s = dynamic_cast<Spaceship*>(t);
-                result += s->get_maxSpeed();
+                result += std::to_string(s->get_maxSpeed());
                 result += " ";
-                result += s->get_hyperjumpRange();
+                result += std::to_string(s->get_hyperjumpRange());
                 return result;
             } },
     };
@@ -216,7 +326,15 @@ void Table::printTable() const
                   << std::setw(14) << "Марка" << "| "
                   << std::setw(14) << "Модель" << "| "
                   << std::setw(9) << "Год" << "| "
-                  << std::setw(12) << "Вес (кг)" << '\n';
+                  << std::setw(12) << "Вес (кг)" << "| "
+                  << std::setw(17) << "Число владельцев" << "| "
+                  << std::setw(11) << "Пробег(км)" << "| "
+                  << std::setw(13) << "Длина судна(м)" << "| "
+                  << std::setw(14) << "Ширина судна(м)" << "| "
+                  << std::setw(21) << "Грузоподъемность(т.)" << "| "
+                  << std::setw(25) << "Мощность двигателя(л.с.)" << "| "
+                  << std::setw(23) << "Макс. скорость (км/c)" << "| "
+                  << std::setw(28) << "Дальность гиперпрыжка(а.е.)" << "| " << std::endl;
 
         // разделитель
         std::cout << std::string(2, '-') << "+"
@@ -224,7 +342,15 @@ void Table::printTable() const
                   << std::string(10, '-') << "+"
                   << std::string(9, '-') << "+"
                   << std::string(7, '-') << "+"
-                  << std::string(10, '-') << "\n";
+                  << std::string(10, '-') << "+"
+                  << std::string(12, '-') << "+"
+                  << std::string(17, '-') << "+"
+                  << std::string(11, '-') << "+"
+                  << std::string(13, '-') << "+"
+                  << std::string(21, '-') << "+"
+                  << std::string(25, '-') << "+"
+                  << std::string(23, '-') << "+"
+                  << std::string(28, '-') << "+" << std::endl;
 
         for (const auto &x : m_vehicles)
         {
@@ -243,7 +369,7 @@ void Table::printTable() const
 }
 
 // создание
-std::unique_ptr<Transport>  Table::create_tr(
+Transport*  Table::create_tr(
     const std::string &typeTrans,
     const std::string &brandTrans,
     const std::string &modelTrans,
@@ -262,14 +388,16 @@ std::unique_ptr<Transport>  Table::create_tr(
                 yearTrans, 
                 weightTrans);
 
+            Transport* ptr = res.get(); 
             m_vehicles.push_back(std::move(res));
-            return std::move(res);
+            return ptr;
         }
         return nullptr;
     }
     catch (...)
     {
         std::cerr << "Неизвестная ошибка" << std::endl;
+        return nullptr;
     }
 }
 
@@ -286,12 +414,12 @@ void Table::create_addit_field_tr(const std::string& typeTrans,
     if(it)
     {
         std::cout << "Хотите заполнить дополнительные поля?\n";
-        std::cout << "1: Да\n 2: Нет" << std::endl;
+        std::cout << "1: Да\n2: Нет" << std::endl;
         bool answer;
         std::cin >> answer;
                 
         if (answer)
-            additMap[it->get_type()](it.get());        
+            additMap[it->get_type()](it);        
     }
 }
 
@@ -463,8 +591,6 @@ void Table::input_file(const std::string &name)
             result += " ";
             result += std::to_string(it->get_weight());
             result += " ";
-            result += std::to_string(it->get_weight());
-            result += " ";
             saveMap[it->get_type()](it.get(), result);
             w.in(result);
         }
@@ -501,7 +627,7 @@ void Table::output_file(const std::string &name)
             auto it = create_tr(typeTrans, brandTrans, modelTrans, yearTrans, weightTrans);
             
             if (!it)
-                loadMap[typeTrans](it.get(), in);
+                loadMap[typeTrans](it, in);
         }
     }
     catch (const std::exception &e)

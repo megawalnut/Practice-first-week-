@@ -1,5 +1,7 @@
 #include "Boat.h"
 
+#include <iostream>
+#include <iomanip>
 
 //конструктор
 Boat::Boat(const std::string& brandTrans, const std::string& modelTrans, 
@@ -44,6 +46,16 @@ double Boat::get_widthBoat() const { return m_widthBoat; }
 void Boat::set_lengthBoat(double lengthBoatTrans) { m_lengthBoat = lengthBoatTrans; }
 void Boat::set_widthBoat(double widthBoatTrans) { m_widthBoat = widthBoatTrans; }
 //info
-void Boat::info() const override {
-
+void Boat::info() const 
+{
+	Transport::info();
+	std::cout << std::left
+		<< std::setw(2) << "X" << "| "
+		<< std::setw(10) << "X" << "| "
+		<< std::setw(9) << get_lengthBoat() << "| "
+		<< std::setw(8) << get_widthBoat() << "| "
+		<< std::setw(6) << "X" << "| "
+		<< std::setw(6) << "X" << "| "
+		<< std::setw(6) << "X" << "| "
+		<< std::setw(9) << "X" << "| " << std::endl;
 }

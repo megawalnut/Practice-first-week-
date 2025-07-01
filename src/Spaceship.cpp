@@ -1,5 +1,8 @@
 #include "Spaceship.h"
 
+#include <iostream>
+#include <iomanip>
+
 // конструктор
 Spaceship::Spaceship(const std::string &brandTrans, const std::string &modelTrans, 
         int yearTrans, double weightTrans) : Transport(
@@ -46,6 +49,16 @@ double Spaceship::get_hyperjumpRange() const { return m_hyperjumpRange; }
 void Spaceship::set_maxSpeed(double maxSpeedTrans) { m_maxSpeed = maxSpeedTrans; }
 void Spaceship::set_hyperjumpRange(double hyperjumpRangeTrans) { m_hyperjumpRange = hyperjumpRangeTrans; }
 //info
-void Spaceship::info() const override {
-
+void Spaceship::info() const 
+{
+	Transport::info();
+	std::cout << std::left
+		<< std::setw(2) << "X" << "| "
+		<< std::setw(10) << "X" << "| "
+		<< std::setw(9) << "X" << "| "
+		<< std::setw(8) << "X" << "| "
+		<< std::setw(6) << "X" << "| "
+		<< std::setw(6) << "X" << "| "
+		<< std::setw(6) << get_maxSpeed() << "| "
+		<< std::setw(9) << get_hyperjumpRange() << "| " << std::endl;
 }

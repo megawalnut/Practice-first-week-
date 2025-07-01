@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <sstream>
 #include <iomanip>
+#include <functional>
 
 class Table {
 	private:
@@ -50,7 +51,7 @@ class Table {
 		void printTable() const;
 
 		//создание
-		std::unique_ptr<Transport> create_tr(
+		Transport* create_tr(
             const std::string& typeTrans, 
             const std::string& brandTrans, 
             const std::string& modelTrans, 
