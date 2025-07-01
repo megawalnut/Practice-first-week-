@@ -29,7 +29,4 @@ class Boat : public Transport {
 		//set
 		void set_lengthBoat(double lengthBoatTrans);
 		void set_widthBoat(double widthBoatTrans);
-
-		//информация об объекте
-		void info() const override;
 };

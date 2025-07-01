@@ -48,17 +48,3 @@ int Helicopter::get_enginePower() const { return m_enginePower; }
 //set
 void Helicopter::set_capacity(double capacityTrans) { m_capacity = capacityTrans; }
 void Helicopter::set_enginePower(int enginePowerTrans) { m_enginePower = enginePowerTrans; }
-//info
-void Helicopter::info() const
-{
-	Transport::info();
-	std::cout << std::left
-		<< std::setw(2) << "X" << "| "
-		<< std::setw(10) << "X" << "| "
-		<< std::setw(9) << "X" << "| "
-		<< std::setw(8) << "X" << "| "
-		<< std::setw(6) << get_capacity() << "| "
-		<< std::setw(6) << get_enginePower() << "| "
-		<< std::setw(6) << "X" << "| "
-		<< std::setw(9) << "X" << "| " << std::endl;
-}

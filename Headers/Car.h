@@ -28,8 +28,4 @@ class Car : public Transport {
 		//set
 		void set_owners(int ownersTrans);
 		void set_mileage(double mileageTrans);
-
-		//информация об объекте
-		void info() const override;
-		
 };

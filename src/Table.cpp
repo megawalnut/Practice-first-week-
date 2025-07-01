@@ -306,57 +306,136 @@ Table::Table()
                 s->set_hyperjumpRange(hyperjumpRangeTrans);
             }}
     };
-
+    findTypeMap = 
+    {
+        {"Car", [](Transport* a)
+            { 
+                Car* car = dynamic_cast<Car*>(a);
+                if (car)
+                {
+                    std::cout << "Car->Владельцы" << car->get_owners();
+                    std::cout << "Car->Пробег (км)" << car->get_mileage();
+                }
+            }
+        },
+        {"Boat", [](Transport* a)
+            { 
+                Boat* boat = dynamic_cast<Boat*>(a);
+                if (boat)
+                {
+                    std::cout << "Boat->Длина (м)" << boat->get_lengthBoat();
+                    std::cout << "Boat->Ширина (м)" << boat->get_widthBoat();
+                }
+            }
+        },
+        {"Helicopter", [](Transport* a)
+            { 
+                Helicopter* helicopter = dynamic_cast<Helicopter*>(a);
+                if (helicopter)
+                {
+                    std::cout << "Helicopter->Грузопод. (т)" << helicopter->get_capacity();
+                    std::cout << "Helicopter->Мощность (лс)" << helicopter->get_enginePower();
+                }
+            }
+        },
+        {"Spaceship", [](Transport* a)
+            { 
+                Spaceship* spaceship = dynamic_cast<Spaceship*>(a);
+                if (spaceship)
+                {
+                    std::cout << "Spaceship->Max скорость" << spaceship->get_maxSpeed();
+                    std::cout << "Spaceship->Дальность (ае)" << spaceship->get_hyperjumpRange();
+                }
+            }
+        }
+    };
 }
 
 
-// методы
-
-// отрисовка
+//методы
+//для отрисовки
+void Table::forPrintTable(const std::vector<std::unique_ptr<Transport>>& vehicles,
+    const std::string& label, 
+    int label_width,
+    int data_width,
+    std::function<std::string(Transport*)> get_value) const 
+{
+    //вывод заголовка
+    std::cout << "| " << std::setw(label_width) << std::left << label << " |";
+    
+    //вывод данных для каждого транспорта
+    for (const auto& v : vehicles) {
+        std::cout << std::setw(data_width) << std::left << get_value(v.get()) << " |";
+    }
+    
+    //перенос строки после завершения строки таблицы
+    std::cout << "\n";
+}
+//отрисовка
 void Table::printTable() const
 {
     try
     {
-        if (m_vehicles.empty())
-            throw std::logic_error("Список пуст");
-        std::cout << "\n";
-        std::cout << std::left
-                  << std::setw(2) << "ID" << "| "
-                  << std::setw(13) << "Тип" << "| "
-                  << std::setw(14) << "Марка" << "| "
-                  << std::setw(14) << "Модель" << "| "
-                  << std::setw(9) << "Год" << "| "
-                  << std::setw(12) << "Вес (кг)" << "| "
-                  << std::setw(17) << "Число владельцев" << "| "
-                  << std::setw(11) << "Пробег(км)" << "| "
-                  << std::setw(13) << "Длина судна(м)" << "| "
-                  << std::setw(14) << "Ширина судна(м)" << "| "
-                  << std::setw(21) << "Грузоподъемность(т.)" << "| "
-                  << std::setw(25) << "Мощность двигателя(л.с.)" << "| "
-                  << std::setw(23) << "Макс. скорость (км/c)" << "| "
-                  << std::setw(28) << "Дальность гиперпрыжка(а.е.)" << "| " << std::endl;
+        const int label_width = 20;  //ширина для полей
+        const int data_width = 15;   //Ширина для данных
+        const int total_width = label_width + 3 + (data_width + 3) * m_vehicles.size();
 
-        // разделитель
-        std::cout << std::string(2, '-') << "+"
-                  << std::string(11, '-') << "+"
-                  << std::string(10, '-') << "+"
-                  << std::string(9, '-') << "+"
-                  << std::string(7, '-') << "+"
-                  << std::string(10, '-') << "+"
-                  << std::string(12, '-') << "+"
-                  << std::string(17, '-') << "+"
-                  << std::string(11, '-') << "+"
-                  << std::string(13, '-') << "+"
-                  << std::string(21, '-') << "+"
-                  << std::string(25, '-') << "+"
-                  << std::string(23, '-') << "+"
-                  << std::string(28, '-') << "+" << std::endl;
+        auto print_divider = [&]() { std::cout << std::string(total_width, '-') << '\n'; };
 
-        for (const auto &x : m_vehicles)
-        {
-            x->info();
-        }
-        std::cout << std::endl;
+        print_divider();
+
+        //основные параметры
+        forPrintTable(m_vehicles, "ID", label_width, data_width, [](Transport* v) { return std::to_string(v->get_id()); });
+        forPrintTable(m_vehicles, "Тип", label_width, data_width, [](Transport* v) { return v->get_type(); });
+        forPrintTable(m_vehicles, "Марка", label_width, data_width, [](Transport* v) { return v->get_brand(); });
+        forPrintTable(m_vehicles, "Модель", label_width, data_width, [](Transport* v) { return v->get_model(); });
+        forPrintTable(m_vehicles, "Вес (кг)", label_width, data_width, [](Transport* v) { return std::to_string(v->get_weight()); });
+
+        //параметры car
+        forPrintTable(m_vehicles, "Car->Владельцы", label_width, data_width, [](Transport* v) {
+            if (auto car = dynamic_cast<Car*>(v)) return std::to_string(car->get_owners());
+            return std::string("X");
+        });
+
+        forPrintTable(m_vehicles, "Car->Пробег (км)", label_width, data_width, [](Transport* v) {
+            if (auto car = dynamic_cast<Car*>(v)) return std::to_string(car->get_mileage());
+            return std::string("X");
+        });
+
+        //параметры boat
+        forPrintTable(m_vehicles, "Boat->Длина (м)", label_width, data_width, [](Transport* v) {
+            if (auto boat = dynamic_cast<Boat*>(v)) return std::to_string(boat->get_lengthBoat());
+            return std::string("X");
+        });
+
+        forPrintTable(m_vehicles, "Boat->Ширина (м)", label_width, data_width, [](Transport* v) {
+            if (auto boat = dynamic_cast<Boat*>(v)) return std::to_string(boat->get_widthBoat());
+            return std::string("X");
+        });
+
+        //параметры helicopter
+        forPrintTable(m_vehicles, "Helicopter->Грузопод. (т)", label_width, data_width, [](Transport* v) {
+            if (auto heli = dynamic_cast<Helicopter*>(v)) return std::to_string(heli->get_capacity());
+            return std::string("X");
+        });
+
+        forPrintTable(m_vehicles, "Helicopter->Мощность (лс)", label_width, data_width, [](Transport* v) {
+            if (auto heli = dynamic_cast<Helicopter*>(v)) return std::to_string(heli->get_enginePower());
+            return std::string("X");
+        });
+
+        //параметры spaceship
+        forPrintTable(m_vehicles, "Spaceship->Max скорость", label_width, data_width, [](Transport* v) {
+            if (auto ship = dynamic_cast<Spaceship*>(v)) return std::to_string(ship->get_maxSpeed());
+            return std::string("X");
+        });
+
+        forPrintTable(m_vehicles, "Spaceship->Дальность (ае)", label_width, data_width, [](Transport* v) {
+            if (auto ship = dynamic_cast<Spaceship*>(v)) return std::to_string(ship->get_hyperjumpRange());
+            return std::string("X");
+        });
+
+        print_divider();
     }
     catch (const std::exception &e)
     {
@@ -558,7 +637,12 @@ void Table::find_tr(int for_find, const std::string& edit)
         auto it = findMap[for_find - 1](edit);
         if (it != m_vehicles.end())
         {
-            (*it)->info();
+            std::cout << "Тип: " << (*it)->get_type() << "\n";
+            std::cout << "Марка: " << (*it)->get_brand() << "\n";
+            std::cout << "Модель: " << (*it)->get_model() << "\n";
+            std::cout << "Год: " << (*it)->get_year() << "\n";
+            std::cout << "Вес: " << (*it)->get_weight() << "\n";
+            findTypeMap[(*it)->get_type()]((*it).get());
         }
     }
     catch (const std::exception &e)

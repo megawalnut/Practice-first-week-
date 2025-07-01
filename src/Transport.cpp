@@ -75,15 +75,5 @@ void Transport::set_brand(const std::string& str) { m_brand = str; }
 void Transport::set_model(const std::string& str) { m_model = str; }
 void Transport::set_year(const int str) { m_year = str; }
 void Transport::set_weight(const double str) { m_weight = str; }
- 
-//информация
-void Transport::info() const {
-	std::cout << std::left
-		<< std::setw(2) << get_id() << "| "
-		<< std::setw(10) << get_type() << "| "
-		<< std::setw(9) << get_brand() << "| "
-		<< std::setw(8) << get_model() << "| "
-		<< std::setw(6) << get_year() << "| "
-		<< std::setw(9) << get_weight() << std::endl;
-}
+
 int Transport::m_for_id = 1;

@@ -28,7 +28,4 @@ class Helicopter : public Transport {
 		//set
 		void set_capacity(double capacityTrans);
 		void set_enginePower(int enginePowerTrans);
-
-		//информация об объекте
-		void info() const override;
 };

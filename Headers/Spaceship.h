@@ -29,7 +29,4 @@ class Spaceship : public Transport {
 		//set
 		void set_maxSpeed(double maxSpeedTrans);
 		void set_hyperjumpRange(double hyperjumpRangeTrans);
-
-		//информация об объекте
-		void info() const override;
 };

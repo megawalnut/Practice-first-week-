@@ -44,7 +44,4 @@ public:
 	virtual void set_model(const std::string& str);
 	virtual void set_year(const int str);
 	virtual void set_weight(const double str);
-
-	//информация
-	virtual void info() const;
 };

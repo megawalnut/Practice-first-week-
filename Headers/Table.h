@@ -38,8 +38,8 @@ class Table {
 		std::map<int, std::function<void()>> sortMap;
 		//map для записи в файл
 		std::map<std::string, std::function<std::string(Transport*, std::string&)>> saveMap;
-
-		
+		//map вывода найденого объекта
+		std::map <std::string, std::function<void(Transport*)>> findTypeMap;
 	public:
 		//конструктор
 		Table();
@@ -47,6 +47,13 @@ class Table {
 		~Table() = default;
 
 		//методы
+		//для отрисовки
+		void forPrintTable(const std::vector<std::unique_ptr<Transport>>& vehicles, 
+				const std::string& label, 
+				const int width, 
+				const int data_width,
+				std::function<std::string(Transport*)> get_value) const;
+
 		//отрисовка
 		void printTable() const;
 
