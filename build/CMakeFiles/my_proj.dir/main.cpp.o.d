@@ -207,6 +207,22 @@ CMakeFiles/my_proj.dir/main.cpp.o: \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.1.1/bits/fstream.tcc \
  /home/mike/my_projects/project_1/Headers/Table.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/Strategy.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/Context.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyId.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyType.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyModel.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyBrand.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyYear.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWeight.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyOwners.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyMileage.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyLengthBoat.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWidthBoat.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyCapacity.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyEnginePower.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyMaxSpeed.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyHyperjumpRange.h \
  /usr/include/c++/15.1.1/map /usr/include/c++/15.1.1/bits/stl_tree.h \
  /usr/include/c++/15.1.1/bits/node_handle.h \
  /usr/include/c++/15.1.1/bits/stl_map.h \

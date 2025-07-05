@@ -1,8 +1,8 @@
-CMakeFiles/my_proj.dir/src/Table.cpp.o: \
- /home/mike/my_projects/project_1/src/Table.cpp \
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o: \
+ /home/mike/my_projects/project_1/src/ForStrategy/StrategyWidthBoat.cpp \
  /usr/include/stdc-predef.h \
- /home/mike/my_projects/project_1/Headers/Table.h \
- /home/mike/my_projects/project_1/Headers/ForFactory/Creator.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWidthBoat.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/Strategy.h \
  /home/mike/my_projects/project_1/Headers/Transport.h \
  /usr/include/c++/15.1.1/string \
  /usr/include/c++/15.1.1/bits/requires_hosted.h \
@@ -112,9 +112,12 @@ CMakeFiles/my_proj.dir/src/Table.cpp.o: \
  /usr/include/c++/15.1.1/bits/uses_allocator.h \
  /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
  /usr/include/c++/15.1.1/tuple /usr/include/c++/15.1.1/bits/ranges_util.h \
- /usr/include/c++/15.1.1/memory \
- /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
+ /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
+ /usr/include/c++/15.1.1/bits/stl_vector.h \
+ /usr/include/c++/15.1.1/bits/stl_bvector.h \
+ /usr/include/c++/15.1.1/bits/vector.tcc /usr/include/c++/15.1.1/memory \
+ /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
  /usr/include/c++/15.1.1/bits/stl_raw_storage_iter.h \
  /usr/include/c++/15.1.1/bits/align.h \
  /usr/include/c++/15.1.1/bits/unique_ptr.h \
@@ -189,42 +192,7 @@ CMakeFiles/my_proj.dir/src/Table.cpp.o: \
  /usr/include/c++/15.1.1/bits/ranges_algobase.h \
  /usr/include/c++/15.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/15.1.1/pstl/execution_defs.h \
- /home/mike/my_projects/project_1/Headers/ForFactory/CreateCar.h \
- /home/mike/my_projects/project_1/Headers/ForFactory/CreateBoat.h \
- /home/mike/my_projects/project_1/Headers/ForFactory/CreateHelicopter.h \
- /home/mike/my_projects/project_1/Headers/ForFactory/CreateSpaceship.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/Strategy.h \
- /usr/include/c++/15.1.1/vector /usr/include/c++/15.1.1/bits/stl_vector.h \
- /usr/include/c++/15.1.1/bits/stl_bvector.h \
- /usr/include/c++/15.1.1/bits/vector.tcc \
- /home/mike/my_projects/project_1/Headers/ForStrategy/Context.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyId.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyType.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyModel.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyBrand.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyYear.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWeight.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyOwners.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyMileage.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyLengthBoat.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWidthBoat.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyCapacity.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyEnginePower.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyMaxSpeed.h \
- /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyHyperjumpRange.h \
- /home/mike/my_projects/project_1/Headers/WorkWithFile.h \
- /usr/include/c++/15.1.1/iostream /usr/include/c++/15.1.1/ostream \
- /usr/include/c++/15.1.1/bits/ostream.tcc /usr/include/c++/15.1.1/istream \
- /usr/include/c++/15.1.1/bits/istream.tcc /usr/include/c++/15.1.1/fstream \
- /usr/include/c++/15.1.1/bits/codecvt.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.1.1/bits/fstream.tcc /usr/include/c++/15.1.1/map \
- /usr/include/c++/15.1.1/bits/stl_tree.h \
- /usr/include/c++/15.1.1/bits/node_handle.h \
- /usr/include/c++/15.1.1/bits/stl_map.h \
- /usr/include/c++/15.1.1/bits/stl_multimap.h \
- /usr/include/c++/15.1.1/bits/erase_if.h \
+ /home/mike/my_projects/project_1/Headers/Boat.h \
  /usr/include/c++/15.1.1/algorithm \
  /usr/include/c++/15.1.1/bits/stl_algo.h \
  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
@@ -232,26 +200,6 @@ CMakeFiles/my_proj.dir/src/Table.cpp.o: \
  /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
  /usr/include/c++/15.1.1/bits/ranges_algo.h \
  /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
- /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/bits/sstream.tcc \
- /usr/include/c++/15.1.1/iomanip /usr/include/c++/15.1.1/locale \
- /usr/include/c++/15.1.1/bits/locale_facets_nonio.h \
- /usr/include/c++/15.1.1/ctime \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/time_members.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h \
- /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
- /usr/include/c++/15.1.1/bits/locale_conv.h \
- /usr/include/c++/15.1.1/bits/quoted_string.h \
- /usr/include/c++/15.1.1/functional \
- /usr/include/c++/15.1.1/bits/std_function.h \
- /usr/include/c++/15.1.1/unordered_map \
- /usr/include/c++/15.1.1/bits/unordered_map.h \
- /usr/include/c++/15.1.1/bits/hashtable.h \
- /usr/include/c++/15.1.1/bits/hashtable_policy.h \
- /usr/include/c++/15.1.1/bits/enable_special_members.h \
- /usr/include/c++/15.1.1/array \
- /home/mike/my_projects/project_1/Headers/Car.h \
- /home/mike/my_projects/project_1/Headers/Boat.h \
- /home/mike/my_projects/project_1/Headers/Helicopter.h \
- /home/mike/my_projects/project_1/Headers/Spaceship.h \
- /usr/include/c++/15.1.1/stdlib.h
+ /usr/include/c++/15.1.1/iostream /usr/include/c++/15.1.1/ostream \
+ /usr/include/c++/15.1.1/bits/ostream.tcc /usr/include/c++/15.1.1/istream \
+ /usr/include/c++/15.1.1/bits/istream.tcc

@@ -240,6 +240,230 @@ CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForFactory/CreateSpaceship.cpp -o CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.s
 
+CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/Strategy.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/Strategy.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/Strategy.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/Strategy.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/Context.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/Context.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/Context.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/Context.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyId.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyId.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyId.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyId.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyType.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyType.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyType.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyType.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyModel.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyModel.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyModel.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyModel.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyBrand.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyBrand.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyBrand.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyBrand.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyYear.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyYear.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyYear.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyYear.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyWeight.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyWeight.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyWeight.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyWeight.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyOwners.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyOwners.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyOwners.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyOwners.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyMileage.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyMileage.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyMileage.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyMileage.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyLengthBoat.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyLengthBoat.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyLengthBoat.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyLengthBoat.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyWidthBoat.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyWidthBoat.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyWidthBoat.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyWidthBoat.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyCapacity.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyCapacity.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyCapacity.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyCapacity.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyEnginePower.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyEnginePower.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyEnginePower.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyEnginePower.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyMaxSpeed.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyMaxSpeed.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyMaxSpeed.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyMaxSpeed.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.s
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o: CMakeFiles/my_proj.dir/flags.make
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o: /home/mike/my_projects/project_1/src/ForStrategy/StrategyHyperjumpRange.cpp
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o: CMakeFiles/my_proj.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o -MF CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o.d -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o -c /home/mike/my_projects/project_1/src/ForStrategy/StrategyHyperjumpRange.cpp
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mike/my_projects/project_1/src/ForStrategy/StrategyHyperjumpRange.cpp > CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.i
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mike/my_projects/project_1/src/ForStrategy/StrategyHyperjumpRange.cpp -o CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.s
+
 # Object files for target my_proj
 my_proj_OBJECTS = \
 "CMakeFiles/my_proj.dir/main.cpp.o" \
@@ -253,7 +477,23 @@ my_proj_OBJECTS = \
 "CMakeFiles/my_proj.dir/src/ForFactory/CreateCar.cpp.o" \
 "CMakeFiles/my_proj.dir/src/ForFactory/CreateBoat.cpp.o" \
 "CMakeFiles/my_proj.dir/src/ForFactory/CreateHelicopter.cpp.o" \
-"CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.o"
+"CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o" \
+"CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o"
 
 # External object files for target my_proj
 my_proj_EXTERNAL_OBJECTS =
@@ -270,10 +510,26 @@ my_proj: CMakeFiles/my_proj.dir/src/ForFactory/CreateCar.cpp.o
 my_proj: CMakeFiles/my_proj.dir/src/ForFactory/CreateBoat.cpp.o
 my_proj: CMakeFiles/my_proj.dir/src/ForFactory/CreateHelicopter.cpp.o
 my_proj: CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o
+my_proj: CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o
 my_proj: CMakeFiles/my_proj.dir/build.make
 my_proj: CMakeFiles/my_proj.dir/compiler_depend.ts
 my_proj: CMakeFiles/my_proj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable my_proj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mike/my_projects/project_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX executable my_proj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_proj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
