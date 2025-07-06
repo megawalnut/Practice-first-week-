@@ -1,4 +1,0 @@
-﻿Car lada granta 2012 20.000000
-Helicopter bell 222 1999 10000.000000
-Boat bavaria sport 2019 459.000000
-Spaceship space x 2000 123.000000

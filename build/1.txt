@@ -1,0 +1,6 @@
+Car 1 Toyota Camry 2020 1500 2 50000
+Boat 2 Yamaha 345 2018 1200 5.2 2.1
+Helicopter 3 Bell 407 2015 2500 1.2 650
+Spaceship 4 SpaceX Starship 2023 5000 7.5 1.2
+Car 5 BMW X5 2021 2100 1 12000
+Boat 6 Bayliner E5 2022 800 4.3 1.8
