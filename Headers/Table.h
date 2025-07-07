@@ -6,6 +6,26 @@
 #include "CreateBoat.h"
 #include "CreateHelicopter.h"
 #include "CreateSpaceship.h"
+//_________________________________________
+
+#include "Strategy.h"
+#include "Context.h"
+
+#include "StrategyId.h"
+#include "StrategyType.h"
+#include "StrategyBrand.h"
+#include "StrategyModel.h"
+#include "StrategyYear.h"
+#include "StrategyWeight.h"
+#include "StrategyOwners.h"
+#include "StrategyMileage.h"
+#include "StrategyLengthBoat.h"
+#include "StrategyWidthBoat.h"
+#include "StrategyCapacity.h"
+#include "StrategyEnginePower.h"
+#include "StrategyMaxSpeed.h"
+#include "StrategyHyperjumpRange.h"
+//_________________________________________
 
 #include "WorkWithFile.h"
 
@@ -14,6 +34,7 @@
 #include <algorithm>
 #include <sstream>
 #include <iomanip>
+#include <functional>
 
 class Table {
 	private:
@@ -21,36 +42,39 @@ class Table {
         using FindType = std::vector<std::unique_ptr<Transport>>::iterator;
 		using CreateType = std::unique_ptr<Creator>;
         
-		//map для поиска
-		std::map<int,std::function<FindType(const std::string& edit)>> findMap;
+
+		//вектор с ссылками на стратегии
+		std::map<int, std::function<std::unique_ptr<Strategy>()>> m_mapForStrategy;
+
 		//map для создания
 		std::map<std::string, std::function<CreateType()>> createMap;
-		//map для добавления полей
-		std::map<std::string, std::function<void(Transport* t)>> additMap;
-		//map для редактирования
-		std::map <int, std::function<void(std::string&, std::unique_ptr<Transport>&)>> editMap;
+
 		//контейнер с объектами
 		std::vector<std::unique_ptr<Transport>> m_vehicles;
-		//map для загрузки из файла
-		std::map<std::string, std::function<void(Transport*, std::istringstream&)>> loadMap;
-		//map для сортиировки
-		std::map<int, std::function<void()>> sortMap;
-		//map для записи в файл
-		std::map<std::string, std::function<std::string(Transport*, std::string&)>> saveMap;
 
-		
+		//для стратегий
+		Context m_context;
+
+
 	public:
 		//конструктор
-		Table();
+		Table(std::unique_ptr<Strategy>&& otherStrategy);
 		//деструктор
 		~Table() = default;
 
 		//методы
+		//для отрисовки
+		void forPrintTable(const std::vector<std::unique_ptr<Transport>>& vehicles, 
+				const int width, 
+				const int data_width,
+				const std::string& label, 
+				std::function<std::string(Transport*)> get_value) const;
+
 		//отрисовка
 		void printTable() const;
 
 		//создание
-		std::unique_ptr<Transport> create_tr(
+		Transport* create_tr(
             const std::string& typeTrans, 
             const std::string& brandTrans, 
             const std::string& modelTrans, 
@@ -69,18 +93,18 @@ class Table {
 		void delete_tr(int id);
 
 		//редактирование
-		void edit_tr(int id);
+		void edit_tr(int id, int for_edit);
 
 		//сортировка
 		void sort_tr(int for_sort);
 
 		//поиск
-		void find_tr(int for_find, const std::string& edit);
+		void find_tr(const std::string& edit, int for_find);
 
 		//сохранить в файл
-		void input_file(const std::string& name);
+		void writingFile(const std::string& name);
 
 		//загрузить из файла
-		void output_file(const std::string& name);
+		void readingFile(const std::string& name);
 };
 

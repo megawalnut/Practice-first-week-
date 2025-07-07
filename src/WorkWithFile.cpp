@@ -1,7 +1,7 @@
 #include "WorkWithFile.h"
 
 // конструктор
-WorkWithfile::WorkWithfile(const std::string &name) : m_fileName{name}
+WorkWithFile::WorkWithFile(const std::string &name) : m_fileName{name}
 {
     try
     {
@@ -21,19 +21,19 @@ WorkWithfile::WorkWithfile(const std::string &name) : m_fileName{name}
     }
 }
 // деструктор
-WorkWithfile::~WorkWithfile()
+WorkWithFile::~WorkWithFile()
 {
     if (m_file.is_open())
         m_file.close();
 }
 // запись
-void WorkWithfile::in(const std::string &str)
+void WorkWithFile::inputToFile(const std::string &str)
 {
     if (m_file.is_open())
         m_file << str << std::endl;
 }
 // чтение
-std::vector<std::string> WorkWithfile::out()
+std::vector<std::string> WorkWithFile::outFromFile()
 {
 
     std::vector<std::string> v;

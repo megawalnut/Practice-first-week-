@@ -19,7 +19,9 @@ int main()
 	setlocale(LC_ALL, "rus");
 
 	int menu = -1;
-	Table tb;
+	std::unique_ptr<Strategy> strat = std::make_unique<Strategy>();
+	Table tb(std::move(strat));
+
 	while (menu)
 	{
 
@@ -43,7 +45,7 @@ int main()
 		{
 			// создание
 
-			std::cout << "Выбери тип транспорта для создания \n";
+			std::cout << "Выбери тип транспорта для создания: \n";
 			std::cout << "Car\n";
 			std::cout << "Helicopter\n";
 			std::cout << "Boat\n";
@@ -52,7 +54,6 @@ int main()
 
 			std::string typeTrans;
 			std::cin >> typeTrans;
-
 			typeTrans[0] = std::toupper(typeTrans[0]);
 
 			if (typeTrans == "Car" ||
@@ -67,10 +68,15 @@ int main()
 
 				std::cout << "Введи марку: \n";
 				std::cin >> brandTrans;
+				brandTrans[0] = std::toupper(brandTrans[0]);
+
 				std::cout << "Введи модель: \n";
 				std::cin >> modelTrans;
+				modelTrans[0] = std::toupper(modelTrans[0]);
+
 				std::cout << "Введи год: \n";
 				std::cin >> yearTrans;
+
 				std::cout << "Введи вес(кг): \n";
 				std::cin >> weightTrans;
 
@@ -84,10 +90,22 @@ int main()
 			// редактирование
 
 			int id;
-			std::cout << "Введите id объекта" << std::endl;
+			std::cout << "Введите id объекта:" << std::endl;
 			std::cin >> id;
 
-			tb.edit_tr(id);
+			std::cout << "Выберите: \n";
+            std::cout << "1: Марка\n";
+            std::cout << "2: Модель\n";
+            std::cout << "3: Год\n";
+            std::cout << "4: Вес\n";
+            std::cout << "5: Доп. поля\n";
+            std::cout << "0: Выход" << std::endl;
+
+			int for_edit = -1;
+            while (for_edit < 0 || for_edit > 5)
+                std::cin >> for_edit;
+
+			tb.edit_tr(id, for_edit);
 			menu = -1;
 			break;
 		}
@@ -125,6 +143,8 @@ int main()
 			{
 				if (for_sort == 7) 
 				{
+					for_sort = -1;
+
 					std::cout << "Car ->\n";
 					std::cout << "\t7: Число владельцев\n";
 					std::cout << "\t8: Пробег\n";
@@ -169,6 +189,8 @@ int main()
 			{		
 				if (for_find == 7)
 				{
+					for_find = -1;
+
 					std::cout << "Car ->\n";
 					std::cout << "\t7: Число владельцев\n";
 					std::cout << "\t8: Пробег\n";
@@ -189,7 +211,10 @@ int main()
 				std::string edit;
 				std::cin >> edit;
 
-				tb.find_tr(for_find, edit);
+				if(for_find == 2 || for_find == 3 || for_find == 4)
+					edit[0] = std::toupper(edit[0]);
+
+				tb.find_tr(edit, for_find);
 			}
 
 			menu = -1;
@@ -203,7 +228,7 @@ int main()
 			std::string name;
 			std::cin >> name;
 
-			tb.input_file(name);
+			tb.writingFile(name);
 			menu = -1;
 			break;
 		}
@@ -215,7 +240,7 @@ int main()
 			std::string name;
 			std::cin >> name;
 
-			tb.output_file(name);
+			tb.readingFile(name);
 			menu = -1;
 			break;
 		}

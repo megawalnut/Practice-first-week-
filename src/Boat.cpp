@@ -1,5 +1,7 @@
 #include "Boat.h"
 
+#include <iostream>
+#include <iomanip>
 
 //конструктор
 Boat::Boat(const std::string& brandTrans, const std::string& modelTrans, 
@@ -43,7 +45,49 @@ double Boat::get_widthBoat() const { return m_widthBoat; }
 //set
 void Boat::set_lengthBoat(double lengthBoatTrans) { m_lengthBoat = lengthBoatTrans; }
 void Boat::set_widthBoat(double widthBoatTrans) { m_widthBoat = widthBoatTrans; }
-//info
-void Boat::info() const override {
 
+//для редактирования owners и mileage
+void Boat::edit()
+{
+	double lengthBoatTrans;
+	double widthBoatTrans;
+	std::cout << "Введите длину судна(м): \n";
+	std::cin >> lengthBoatTrans;
+	std::cout << "Введите ширину судна(м): \n";
+	std::cin >> widthBoatTrans;
+	set_lengthBoat(lengthBoatTrans);
+	set_widthBoat(widthBoatTrans);
+}
+
+//для чтения доп. полей из файла
+void Boat::read_from_file(std::istream& in)
+{
+	double lengthBoatTrans;
+	double widthBoatTrans;
+	if(!(in >> lengthBoatTrans >> widthBoatTrans))
+	{    	
+		set_lengthBoat(0.0);
+  		set_widthBoat(0.0);
+		return;
+	}
+	set_lengthBoat(lengthBoatTrans);
+    set_widthBoat(widthBoatTrans);
+}
+//для записи доп. полей в файл
+std::string Boat::load_to_file() const
+{
+    return std::to_string(get_lengthBoat()) + " " + std::to_string(get_widthBoat());
+}
+
+//для вывода информации
+void Boat::info() const
+{
+    std::cout << "ID: " << get_id() << "\n";
+    std::cout << "Тип: " << get_type() << "\n";
+    std::cout << "Марка: " << get_brand() << "\n";
+    std::cout << "Модель: " << get_model() << "\n";
+    std::cout << "Год: " << get_year() << "\n";
+    std::cout << "Вес: " << get_weight() << "\n";
+    std::cout << "Длина судна(м): " << get_lengthBoat() << "\n";
+    std::cout << "Ширина судна(м): " << get_widthBoat() << std::endl;
 }

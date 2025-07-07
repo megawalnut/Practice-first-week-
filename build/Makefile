@@ -297,6 +297,390 @@ src/ForFactory/CreateSpaceship.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.s
 .PHONY : src/ForFactory/CreateSpaceship.cpp.s
 
+src/ForStrategy/Context.o: src/ForStrategy/Context.cpp.o
+.PHONY : src/ForStrategy/Context.o
+
+# target to build an object file
+src/ForStrategy/Context.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o
+.PHONY : src/ForStrategy/Context.cpp.o
+
+src/ForStrategy/Context.i: src/ForStrategy/Context.cpp.i
+.PHONY : src/ForStrategy/Context.i
+
+# target to preprocess a source file
+src/ForStrategy/Context.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.i
+.PHONY : src/ForStrategy/Context.cpp.i
+
+src/ForStrategy/Context.s: src/ForStrategy/Context.cpp.s
+.PHONY : src/ForStrategy/Context.s
+
+# target to generate assembly for a file
+src/ForStrategy/Context.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.s
+.PHONY : src/ForStrategy/Context.cpp.s
+
+src/ForStrategy/Strategy.o: src/ForStrategy/Strategy.cpp.o
+.PHONY : src/ForStrategy/Strategy.o
+
+# target to build an object file
+src/ForStrategy/Strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o
+.PHONY : src/ForStrategy/Strategy.cpp.o
+
+src/ForStrategy/Strategy.i: src/ForStrategy/Strategy.cpp.i
+.PHONY : src/ForStrategy/Strategy.i
+
+# target to preprocess a source file
+src/ForStrategy/Strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.i
+.PHONY : src/ForStrategy/Strategy.cpp.i
+
+src/ForStrategy/Strategy.s: src/ForStrategy/Strategy.cpp.s
+.PHONY : src/ForStrategy/Strategy.s
+
+# target to generate assembly for a file
+src/ForStrategy/Strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.s
+.PHONY : src/ForStrategy/Strategy.cpp.s
+
+src/ForStrategy/StrategyBrand.o: src/ForStrategy/StrategyBrand.cpp.o
+.PHONY : src/ForStrategy/StrategyBrand.o
+
+# target to build an object file
+src/ForStrategy/StrategyBrand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o
+.PHONY : src/ForStrategy/StrategyBrand.cpp.o
+
+src/ForStrategy/StrategyBrand.i: src/ForStrategy/StrategyBrand.cpp.i
+.PHONY : src/ForStrategy/StrategyBrand.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyBrand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.i
+.PHONY : src/ForStrategy/StrategyBrand.cpp.i
+
+src/ForStrategy/StrategyBrand.s: src/ForStrategy/StrategyBrand.cpp.s
+.PHONY : src/ForStrategy/StrategyBrand.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyBrand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.s
+.PHONY : src/ForStrategy/StrategyBrand.cpp.s
+
+src/ForStrategy/StrategyCapacity.o: src/ForStrategy/StrategyCapacity.cpp.o
+.PHONY : src/ForStrategy/StrategyCapacity.o
+
+# target to build an object file
+src/ForStrategy/StrategyCapacity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o
+.PHONY : src/ForStrategy/StrategyCapacity.cpp.o
+
+src/ForStrategy/StrategyCapacity.i: src/ForStrategy/StrategyCapacity.cpp.i
+.PHONY : src/ForStrategy/StrategyCapacity.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyCapacity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.i
+.PHONY : src/ForStrategy/StrategyCapacity.cpp.i
+
+src/ForStrategy/StrategyCapacity.s: src/ForStrategy/StrategyCapacity.cpp.s
+.PHONY : src/ForStrategy/StrategyCapacity.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyCapacity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.s
+.PHONY : src/ForStrategy/StrategyCapacity.cpp.s
+
+src/ForStrategy/StrategyEnginePower.o: src/ForStrategy/StrategyEnginePower.cpp.o
+.PHONY : src/ForStrategy/StrategyEnginePower.o
+
+# target to build an object file
+src/ForStrategy/StrategyEnginePower.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o
+.PHONY : src/ForStrategy/StrategyEnginePower.cpp.o
+
+src/ForStrategy/StrategyEnginePower.i: src/ForStrategy/StrategyEnginePower.cpp.i
+.PHONY : src/ForStrategy/StrategyEnginePower.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyEnginePower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.i
+.PHONY : src/ForStrategy/StrategyEnginePower.cpp.i
+
+src/ForStrategy/StrategyEnginePower.s: src/ForStrategy/StrategyEnginePower.cpp.s
+.PHONY : src/ForStrategy/StrategyEnginePower.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyEnginePower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.s
+.PHONY : src/ForStrategy/StrategyEnginePower.cpp.s
+
+src/ForStrategy/StrategyHyperjumpRange.o: src/ForStrategy/StrategyHyperjumpRange.cpp.o
+.PHONY : src/ForStrategy/StrategyHyperjumpRange.o
+
+# target to build an object file
+src/ForStrategy/StrategyHyperjumpRange.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o
+.PHONY : src/ForStrategy/StrategyHyperjumpRange.cpp.o
+
+src/ForStrategy/StrategyHyperjumpRange.i: src/ForStrategy/StrategyHyperjumpRange.cpp.i
+.PHONY : src/ForStrategy/StrategyHyperjumpRange.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyHyperjumpRange.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.i
+.PHONY : src/ForStrategy/StrategyHyperjumpRange.cpp.i
+
+src/ForStrategy/StrategyHyperjumpRange.s: src/ForStrategy/StrategyHyperjumpRange.cpp.s
+.PHONY : src/ForStrategy/StrategyHyperjumpRange.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyHyperjumpRange.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.s
+.PHONY : src/ForStrategy/StrategyHyperjumpRange.cpp.s
+
+src/ForStrategy/StrategyId.o: src/ForStrategy/StrategyId.cpp.o
+.PHONY : src/ForStrategy/StrategyId.o
+
+# target to build an object file
+src/ForStrategy/StrategyId.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o
+.PHONY : src/ForStrategy/StrategyId.cpp.o
+
+src/ForStrategy/StrategyId.i: src/ForStrategy/StrategyId.cpp.i
+.PHONY : src/ForStrategy/StrategyId.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyId.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.i
+.PHONY : src/ForStrategy/StrategyId.cpp.i
+
+src/ForStrategy/StrategyId.s: src/ForStrategy/StrategyId.cpp.s
+.PHONY : src/ForStrategy/StrategyId.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyId.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.s
+.PHONY : src/ForStrategy/StrategyId.cpp.s
+
+src/ForStrategy/StrategyLengthBoat.o: src/ForStrategy/StrategyLengthBoat.cpp.o
+.PHONY : src/ForStrategy/StrategyLengthBoat.o
+
+# target to build an object file
+src/ForStrategy/StrategyLengthBoat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o
+.PHONY : src/ForStrategy/StrategyLengthBoat.cpp.o
+
+src/ForStrategy/StrategyLengthBoat.i: src/ForStrategy/StrategyLengthBoat.cpp.i
+.PHONY : src/ForStrategy/StrategyLengthBoat.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyLengthBoat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.i
+.PHONY : src/ForStrategy/StrategyLengthBoat.cpp.i
+
+src/ForStrategy/StrategyLengthBoat.s: src/ForStrategy/StrategyLengthBoat.cpp.s
+.PHONY : src/ForStrategy/StrategyLengthBoat.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyLengthBoat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.s
+.PHONY : src/ForStrategy/StrategyLengthBoat.cpp.s
+
+src/ForStrategy/StrategyMaxSpeed.o: src/ForStrategy/StrategyMaxSpeed.cpp.o
+.PHONY : src/ForStrategy/StrategyMaxSpeed.o
+
+# target to build an object file
+src/ForStrategy/StrategyMaxSpeed.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o
+.PHONY : src/ForStrategy/StrategyMaxSpeed.cpp.o
+
+src/ForStrategy/StrategyMaxSpeed.i: src/ForStrategy/StrategyMaxSpeed.cpp.i
+.PHONY : src/ForStrategy/StrategyMaxSpeed.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyMaxSpeed.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.i
+.PHONY : src/ForStrategy/StrategyMaxSpeed.cpp.i
+
+src/ForStrategy/StrategyMaxSpeed.s: src/ForStrategy/StrategyMaxSpeed.cpp.s
+.PHONY : src/ForStrategy/StrategyMaxSpeed.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyMaxSpeed.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.s
+.PHONY : src/ForStrategy/StrategyMaxSpeed.cpp.s
+
+src/ForStrategy/StrategyMileage.o: src/ForStrategy/StrategyMileage.cpp.o
+.PHONY : src/ForStrategy/StrategyMileage.o
+
+# target to build an object file
+src/ForStrategy/StrategyMileage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o
+.PHONY : src/ForStrategy/StrategyMileage.cpp.o
+
+src/ForStrategy/StrategyMileage.i: src/ForStrategy/StrategyMileage.cpp.i
+.PHONY : src/ForStrategy/StrategyMileage.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyMileage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.i
+.PHONY : src/ForStrategy/StrategyMileage.cpp.i
+
+src/ForStrategy/StrategyMileage.s: src/ForStrategy/StrategyMileage.cpp.s
+.PHONY : src/ForStrategy/StrategyMileage.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyMileage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.s
+.PHONY : src/ForStrategy/StrategyMileage.cpp.s
+
+src/ForStrategy/StrategyModel.o: src/ForStrategy/StrategyModel.cpp.o
+.PHONY : src/ForStrategy/StrategyModel.o
+
+# target to build an object file
+src/ForStrategy/StrategyModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o
+.PHONY : src/ForStrategy/StrategyModel.cpp.o
+
+src/ForStrategy/StrategyModel.i: src/ForStrategy/StrategyModel.cpp.i
+.PHONY : src/ForStrategy/StrategyModel.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.i
+.PHONY : src/ForStrategy/StrategyModel.cpp.i
+
+src/ForStrategy/StrategyModel.s: src/ForStrategy/StrategyModel.cpp.s
+.PHONY : src/ForStrategy/StrategyModel.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.s
+.PHONY : src/ForStrategy/StrategyModel.cpp.s
+
+src/ForStrategy/StrategyOwners.o: src/ForStrategy/StrategyOwners.cpp.o
+.PHONY : src/ForStrategy/StrategyOwners.o
+
+# target to build an object file
+src/ForStrategy/StrategyOwners.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o
+.PHONY : src/ForStrategy/StrategyOwners.cpp.o
+
+src/ForStrategy/StrategyOwners.i: src/ForStrategy/StrategyOwners.cpp.i
+.PHONY : src/ForStrategy/StrategyOwners.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyOwners.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.i
+.PHONY : src/ForStrategy/StrategyOwners.cpp.i
+
+src/ForStrategy/StrategyOwners.s: src/ForStrategy/StrategyOwners.cpp.s
+.PHONY : src/ForStrategy/StrategyOwners.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyOwners.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.s
+.PHONY : src/ForStrategy/StrategyOwners.cpp.s
+
+src/ForStrategy/StrategyType.o: src/ForStrategy/StrategyType.cpp.o
+.PHONY : src/ForStrategy/StrategyType.o
+
+# target to build an object file
+src/ForStrategy/StrategyType.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o
+.PHONY : src/ForStrategy/StrategyType.cpp.o
+
+src/ForStrategy/StrategyType.i: src/ForStrategy/StrategyType.cpp.i
+.PHONY : src/ForStrategy/StrategyType.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyType.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.i
+.PHONY : src/ForStrategy/StrategyType.cpp.i
+
+src/ForStrategy/StrategyType.s: src/ForStrategy/StrategyType.cpp.s
+.PHONY : src/ForStrategy/StrategyType.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyType.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.s
+.PHONY : src/ForStrategy/StrategyType.cpp.s
+
+src/ForStrategy/StrategyWeight.o: src/ForStrategy/StrategyWeight.cpp.o
+.PHONY : src/ForStrategy/StrategyWeight.o
+
+# target to build an object file
+src/ForStrategy/StrategyWeight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o
+.PHONY : src/ForStrategy/StrategyWeight.cpp.o
+
+src/ForStrategy/StrategyWeight.i: src/ForStrategy/StrategyWeight.cpp.i
+.PHONY : src/ForStrategy/StrategyWeight.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyWeight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.i
+.PHONY : src/ForStrategy/StrategyWeight.cpp.i
+
+src/ForStrategy/StrategyWeight.s: src/ForStrategy/StrategyWeight.cpp.s
+.PHONY : src/ForStrategy/StrategyWeight.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyWeight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.s
+.PHONY : src/ForStrategy/StrategyWeight.cpp.s
+
+src/ForStrategy/StrategyWidthBoat.o: src/ForStrategy/StrategyWidthBoat.cpp.o
+.PHONY : src/ForStrategy/StrategyWidthBoat.o
+
+# target to build an object file
+src/ForStrategy/StrategyWidthBoat.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o
+.PHONY : src/ForStrategy/StrategyWidthBoat.cpp.o
+
+src/ForStrategy/StrategyWidthBoat.i: src/ForStrategy/StrategyWidthBoat.cpp.i
+.PHONY : src/ForStrategy/StrategyWidthBoat.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyWidthBoat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.i
+.PHONY : src/ForStrategy/StrategyWidthBoat.cpp.i
+
+src/ForStrategy/StrategyWidthBoat.s: src/ForStrategy/StrategyWidthBoat.cpp.s
+.PHONY : src/ForStrategy/StrategyWidthBoat.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyWidthBoat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.s
+.PHONY : src/ForStrategy/StrategyWidthBoat.cpp.s
+
+src/ForStrategy/StrategyYear.o: src/ForStrategy/StrategyYear.cpp.o
+.PHONY : src/ForStrategy/StrategyYear.o
+
+# target to build an object file
+src/ForStrategy/StrategyYear.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o
+.PHONY : src/ForStrategy/StrategyYear.cpp.o
+
+src/ForStrategy/StrategyYear.i: src/ForStrategy/StrategyYear.cpp.i
+.PHONY : src/ForStrategy/StrategyYear.i
+
+# target to preprocess a source file
+src/ForStrategy/StrategyYear.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.i
+.PHONY : src/ForStrategy/StrategyYear.cpp.i
+
+src/ForStrategy/StrategyYear.s: src/ForStrategy/StrategyYear.cpp.s
+.PHONY : src/ForStrategy/StrategyYear.s
+
+# target to generate assembly for a file
+src/ForStrategy/StrategyYear.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_proj.dir/build.make CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.s
+.PHONY : src/ForStrategy/StrategyYear.cpp.s
+
 src/Helicopter.o: src/Helicopter.cpp.o
 .PHONY : src/Helicopter.o
 
@@ -447,6 +831,54 @@ help:
 	@echo "... src/ForFactory/CreateSpaceship.o"
 	@echo "... src/ForFactory/CreateSpaceship.i"
 	@echo "... src/ForFactory/CreateSpaceship.s"
+	@echo "... src/ForStrategy/Context.o"
+	@echo "... src/ForStrategy/Context.i"
+	@echo "... src/ForStrategy/Context.s"
+	@echo "... src/ForStrategy/Strategy.o"
+	@echo "... src/ForStrategy/Strategy.i"
+	@echo "... src/ForStrategy/Strategy.s"
+	@echo "... src/ForStrategy/StrategyBrand.o"
+	@echo "... src/ForStrategy/StrategyBrand.i"
+	@echo "... src/ForStrategy/StrategyBrand.s"
+	@echo "... src/ForStrategy/StrategyCapacity.o"
+	@echo "... src/ForStrategy/StrategyCapacity.i"
+	@echo "... src/ForStrategy/StrategyCapacity.s"
+	@echo "... src/ForStrategy/StrategyEnginePower.o"
+	@echo "... src/ForStrategy/StrategyEnginePower.i"
+	@echo "... src/ForStrategy/StrategyEnginePower.s"
+	@echo "... src/ForStrategy/StrategyHyperjumpRange.o"
+	@echo "... src/ForStrategy/StrategyHyperjumpRange.i"
+	@echo "... src/ForStrategy/StrategyHyperjumpRange.s"
+	@echo "... src/ForStrategy/StrategyId.o"
+	@echo "... src/ForStrategy/StrategyId.i"
+	@echo "... src/ForStrategy/StrategyId.s"
+	@echo "... src/ForStrategy/StrategyLengthBoat.o"
+	@echo "... src/ForStrategy/StrategyLengthBoat.i"
+	@echo "... src/ForStrategy/StrategyLengthBoat.s"
+	@echo "... src/ForStrategy/StrategyMaxSpeed.o"
+	@echo "... src/ForStrategy/StrategyMaxSpeed.i"
+	@echo "... src/ForStrategy/StrategyMaxSpeed.s"
+	@echo "... src/ForStrategy/StrategyMileage.o"
+	@echo "... src/ForStrategy/StrategyMileage.i"
+	@echo "... src/ForStrategy/StrategyMileage.s"
+	@echo "... src/ForStrategy/StrategyModel.o"
+	@echo "... src/ForStrategy/StrategyModel.i"
+	@echo "... src/ForStrategy/StrategyModel.s"
+	@echo "... src/ForStrategy/StrategyOwners.o"
+	@echo "... src/ForStrategy/StrategyOwners.i"
+	@echo "... src/ForStrategy/StrategyOwners.s"
+	@echo "... src/ForStrategy/StrategyType.o"
+	@echo "... src/ForStrategy/StrategyType.i"
+	@echo "... src/ForStrategy/StrategyType.s"
+	@echo "... src/ForStrategy/StrategyWeight.o"
+	@echo "... src/ForStrategy/StrategyWeight.i"
+	@echo "... src/ForStrategy/StrategyWeight.s"
+	@echo "... src/ForStrategy/StrategyWidthBoat.o"
+	@echo "... src/ForStrategy/StrategyWidthBoat.i"
+	@echo "... src/ForStrategy/StrategyWidthBoat.s"
+	@echo "... src/ForStrategy/StrategyYear.o"
+	@echo "... src/ForStrategy/StrategyYear.i"
+	@echo "... src/ForStrategy/StrategyYear.s"
 	@echo "... src/Helicopter.o"
 	@echo "... src/Helicopter.i"
 	@echo "... src/Helicopter.s"

@@ -14,6 +14,22 @@ my_proj: \
   CMakeFiles/my_proj.dir/src/ForFactory/CreateBoat.cpp.o \
   CMakeFiles/my_proj.dir/src/ForFactory/CreateHelicopter.cpp.o \
   CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o \
+  CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libm.so \
@@ -71,6 +87,38 @@ CMakeFiles/my_proj.dir/src/ForFactory/CreateBoat.cpp.o:
 CMakeFiles/my_proj.dir/src/ForFactory/CreateHelicopter.cpp.o:
 
 CMakeFiles/my_proj.dir/src/ForFactory/CreateSpaceship.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Context.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/Strategy.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyId.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyType.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyBrand.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyModel.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyYear.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWeight.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyOwners.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMileage.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyLengthBoat.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyWidthBoat.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyCapacity.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyEnginePower.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyMaxSpeed.cpp.o:
+
+CMakeFiles/my_proj.dir/src/ForStrategy/StrategyHyperjumpRange.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/libstdc++.so:
 

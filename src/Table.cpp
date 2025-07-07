@@ -9,47 +9,8 @@
 #include <stdlib.h>
 
 //конструктор
-Table::Table() 
+Table::Table(std::unique_ptr<Strategy>&& otherStrategy) : m_context{std::move(otherStrategy)}
 {
-    additMap =
-    {
-        {"Car", [](Transport* t)
-            {
-                Car* c = dynamic_cast<Car*>(t);
-                std::cout << "Введите через пробел число владельцев и пробег(км):" << std::endl;
-                int ownersTrans; double mileageTrans;
-                std::cin >> ownersTrans >> mileageTrans;
-                c->set_owners(ownersTrans);
-                c->set_mileage(mileageTrans);
-            }},
-        {"Boat", [](Transport* t)
-            {
-                Boat* b = dynamic_cast<Boat*>(t);
-                std::cout << "Введите через пробел длину и ширину судна(м):" << std::endl;
-                double lengthBoatTrans; double widthBoatTrans;
-                std::cin >> lengthBoatTrans >> widthBoatTrans;
-                b->set_lengthBoat(lengthBoatTrans);
-                b->set_widthBoat(widthBoatTrans);
-            }},
-        {"Helicopter", [](Transport* t)
-            {
-                Helicopter* h = dynamic_cast<Helicopter*>(t);
-                std::cout << "Введите через пробел грузоподъемность(т) и мощность двигателя(л.с.):" << std::endl;
-                double capacityTrans; int enginePowerTrans;
-                std::cin >> capacityTrans >> enginePowerTrans;
-                h->set_capacity(capacityTrans);
-                h->set_enginePower(enginePowerTrans);
-            }},
-        {"Spaceship", [](Transport* t)
-            {
-                Spaceship* s = dynamic_cast<Spaceship*>(t);
-                std::cout << "Введите через пробел макс. скорость(км/с) и дальность гиперпржыка(а.е.):" << std::endl;
-                double maxSpeedTrans; double hyperjumpRangeTrans;
-                std::cin >> maxSpeedTrans >> hyperjumpRangeTrans;
-                s->set_maxSpeed(maxSpeedTrans);
-                s->set_hyperjumpRange(hyperjumpRangeTrans);
-            }}
-    };
     createMap = 
     {
         {"Car", [](){ return std::make_unique<CreateCar>();} },
@@ -57,180 +18,217 @@ Table::Table()
         {"Helicopter", [](){ return std::make_unique<CreateHelicopter>();} },
         {"Spaceship", [](){ return std::make_unique<CreateSpaceship>();} },
     };
-    editMap = 
+    m_mapForStrategy = 
     {
-        { 0, [](std::string& editClassField, std::unique_ptr<Transport>& it) { return it->set_brand(editClassField); } },
-        { 1, [](std::string& editClassField, std::unique_ptr<Transport>& it) { return it->set_model(editClassField); } },
-        { 2, [](std::string& editClassField, std::unique_ptr<Transport>& it) { return it->set_year(std::atoi(editClassField.c_str())); } },
-        { 3, [](std::string& editClassField, std::unique_ptr<Transport>& it) { return it->set_weight(std::atof(editClassField.c_str())); } },
+        { 1, []() { return std::make_unique<StrategyId>(); } },
+        { 2, []() { return std::make_unique<StrategyType>(); } },
+        { 3, []() { return std::make_unique<StrategyModel>(); } },
+        { 4, []() { return std::make_unique<StrategyBrand>(); } },
+        { 5, []() { return std::make_unique<StrategyYear>(); } },
+        { 6, []() { return std::make_unique<StrategyWeight>(); } },
+        { 7, []() { return std::make_unique<StrategyOwners>(); } },
+        { 8, []() { return std::make_unique<StrategyMileage>(); } },
+        { 9, []() { return std::make_unique<StrategyLengthBoat>(); } },
+        { 10, []() { return std::make_unique<StrategyWidthBoat>(); } },
+        { 11, []() { return std::make_unique<StrategyCapacity>(); } },
+        { 12, []() { return std::make_unique<StrategyEnginePower>(); } },
+        { 13, []() { return std::make_unique<StrategyMaxSpeed>(); } },
+        { 14, []() { return std::make_unique<StrategyHyperjumpRange>(); } },
     };
-    sortMap =
-    {
-        { 0, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_id()     < b->get_id();     });} },
-        { 1, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_type()   < b->get_type();   });} },
-        { 2, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_brand()  < b->get_brand();  });} },
-        { 3, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_model()  < b->get_model();  });} },
-        { 4, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_year()   < b->get_year();   });} },
-        { 5, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_weight() < b->get_weight(); });} },
-        { 6, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_owners() < b->get_owners(); });} },
-        { 7, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_mileage() < b->get_mileage(); });} },
-        { 8, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_lengthBoat() < b->get_lengthBoat(); });} },
-        { 9, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_widthBoat() < b->get_widthBoat(); });} },
-        { 10, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_capacity() < b->get_capacity(); });} },
-        { 11, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_enginePower() < b->get_enginePower(); });} },
-        { 12, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_maxSpeed() < b->get_maxSpeed(); });} },
-        { 13, [&](){std::sort(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, const auto &b) { return a->get_hyperjumpRange() < b->get_hyperjumpRange(); });} },
-    };
-    findMap =
-    {
-        { 0, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_id() == atoi(edit.c_str()); }); } 
-        },
-        { 1, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_type() == edit; }); } 
-        },
-        { 2, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_brand() == edit; }); } 
-        },
-        { 3, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_model() == edit; }); } 
-        },
-        { 4, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit) { return a->get_year() == atoi(edit.c_str()); }); } 
-        },
-        { 5, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ){ return a->get_weight() == atof(edit.c_str()); }); } 
-        },
-        { 6, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_owners() == atoi(edit.c_str()); }); } 
-        },
-        { 7, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_mileage() == atof(edit.c_str()); }); } 
-        },
-        { 8, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_lengthBoat() == atof(edit.c_str()); }); } 
-        },
-        { 9, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_widthBoat() == atof(edit.c_str()); }); } 
-        },
-        { 10, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_capacity() == atof(edit.c_str()); }); } 
-        },
-        { 11, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_enginePower() == atoi(edit.c_str()); }); } 
-        },
-        { 12, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_maxSpeed() == atof(edit.c_str()); }); } 
-        },
-        { 13, [&](const std::string& edit)
-            { return std::find_if(m_vehicles.begin(), m_vehicles.end(), [](const auto &a, std::string& edit ) { return a->get_hyperjumpRange() == atof(edit.c_str()); }); } 
-        }
-    };
-    saveMap =
-    {
-        {"Car", [](Transport* t, std::string& result)
-            { 
-                Car* c = dynamic_cast<Car*>(t);
-                result += c->get_owners();
-                result += " ";
-                result += c->get_mileage();
-                return result;
-            } },
-        {"Boat", [](Transport* t, std::string& result)
-            { 
-                Boat* b = dynamic_cast<Boat*>(t);
-                result += b->get_lengthBoat();
-                result += " ";
-                result += b->get_widthBoat();
-                return result;
-            } },
-        {"Helicopter", [](Transport* t, std::string& result)
-            { 
-                Helicopter* h = dynamic_cast<Helicopter*>(t);
-                result += h->get_capacity();
-                result += " ";
-                result += h->get_enginePower();
-                return result;
-            } },
-        {"Spaceship", [](Transport* t, std::string& result)
-            { 
-                Spaceship* s = dynamic_cast<Spaceship*>(t);
-                result += s->get_maxSpeed();
-                result += " ";
-                result += s->get_hyperjumpRange();
-                return result;
-            } },
-    };
-    loadMap =
-    {
-        {"Car", [](Transport* t, std::istringstream& in)
-            {
-                Car* c = dynamic_cast<Car*>(t);
-                int ownersTrans; double mileageTrans;
-                in >> ownersTrans >> mileageTrans;
-                c->set_owners(ownersTrans);
-                c->set_mileage(mileageTrans);
-            }},
-        {"Boat", [](Transport* t, std::istringstream& in)
-            {
-                Boat* b = dynamic_cast<Boat*>(t);
-                double lengthBoatTrans; double widthBoatTrans;
-                in >> lengthBoatTrans >> widthBoatTrans;
-                b->set_lengthBoat(lengthBoatTrans);
-                b->set_widthBoat(widthBoatTrans);
-            }},
-        {"Helicopter", [](Transport* t, std::istringstream& in)
-            {
-                Helicopter* h = dynamic_cast<Helicopter*>(t);
-                double capacityTrans; int enginePowerTrans;
-                in >> capacityTrans >> enginePowerTrans;
-                h->set_capacity(capacityTrans);
-                h->set_enginePower(enginePowerTrans);
-            }},
-        {"Spaceship", [](Transport* t, std::istringstream& in)
-            {
-                Spaceship* s = dynamic_cast<Spaceship*>(t);
-                double maxSpeedTrans; double hyperjumpRangeTrans;
-                in >> maxSpeedTrans >> hyperjumpRangeTrans;
-                s->set_maxSpeed(maxSpeedTrans);
-                s->set_hyperjumpRange(hyperjumpRangeTrans);
-            }}
-    };
-
 }
 
 
-// методы
-
-// отрисовка
+//методы
+//для отрисовки
+void Table::forPrintTable(const std::vector<std::unique_ptr<Transport>>& vehicles,
+    int label_width,
+    int data_width,
+    const std::string& label, 
+    std::function<std::string(Transport*)> get_value) const 
+{
+    //вывод заголовка
+    std::cout << "| " << std::setw(label_width) << std::left << label << " |";
+    
+    //вывод данных для каждого транспорта
+    for (const auto& v : vehicles) {
+        std::cout << std::setw(data_width) << std::left << get_value(v.get()) << " |";
+    }
+    
+    //перенос строки после завершения строки таблицы
+    std::cout << "\n";
+}
+//отрисовка
 void Table::printTable() const
 {
     try
     {
-        if (m_vehicles.empty())
-            throw std::logic_error("Список пуст");
-        std::cout << "\n";
-        std::cout << std::left
-                  << std::setw(2) << "ID" << "| "
-                  << std::setw(13) << "Тип" << "| "
-                  << std::setw(14) << "Марка" << "| "
-                  << std::setw(14) << "Модель" << "| "
-                  << std::setw(9) << "Год" << "| "
-                  << std::setw(12) << "Вес (кг)" << '\n';
+        const int label_width = 20;  //ширина для полей
+        const int data_width = 15;   //Ширина для данных
 
-        // разделитель
-        std::cout << std::string(2, '-') << "+"
-                  << std::string(11, '-') << "+"
-                  << std::string(10, '-') << "+"
-                  << std::string(9, '-') << "+"
-                  << std::string(7, '-') << "+"
-                  << std::string(10, '-') << "\n";
 
-        for (const auto &x : m_vehicles)
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //ID
+        forPrintTable(m_vehicles, label_width, data_width, "ID", [](Transport* v) 
+        { 
+            return std::to_string(v->get_id()); 
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //type
+        forPrintTable(m_vehicles, label_width + 3, data_width, "Тип", [](Transport* v) 
+        { 
+            return v->get_type(); 
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //brand
+        forPrintTable(m_vehicles, label_width + 5, data_width, "Марка", [](Transport* v) 
+        { 
+            return v->get_brand(); 
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //model
+        forPrintTable(m_vehicles, label_width + 6, data_width, "Модель", [](Transport* v) 
+        { 
+            return v->get_model(); 
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //year
+        forPrintTable(m_vehicles, label_width + 3, data_width, "Год", [](Transport* v) 
+        { 
+            return std::to_string(v->get_year()); 
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //weight
+        forPrintTable(m_vehicles, label_width + 5, data_width, "Вес(кг)", [](Transport* v)
+        { 
+            std::ostringstream out;
+            //форматируем сторку
+            out << std::fixed << std::setprecision(2) << v->get_weight();
+            return out.str(); 
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //car->owners
+        forPrintTable(m_vehicles, label_width + 9, data_width, "Car->Владельцы",  [](Transport* v) 
         {
-            x->info();
-        }
-        std::cout << std::endl;
+            if (auto car = dynamic_cast<Car*>(v)) 
+                return std::to_string(car->get_owners());
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        
+        //car->milaege
+        forPrintTable(m_vehicles, label_width + 8, data_width, "Car->Пробег (км)", [](Transport* v) 
+        {
+            if (auto car = dynamic_cast<Car*>(v)) 
+            {
+                std::ostringstream out;
+                //форматируем сторку
+                out << std::fixed << std::setprecision(2) << car->get_mileage();
+                return out.str();
+            }
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //boat->length
+        forPrintTable(m_vehicles, label_width + 6, data_width, "Boa->Длина (м)", [](Transport* v) 
+        {
+            if (auto boat = dynamic_cast<Boat*>(v)) 
+            {
+                std::ostringstream out;
+                //форматируем сторку
+                out << std::fixed << std::setprecision(2) << boat->get_lengthBoat();
+                return out.str();
+            }
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //boat->width
+        forPrintTable(m_vehicles, label_width + 7, data_width, "Boa->Ширина (м)", [](Transport* v) 
+        {
+            if (auto boat = dynamic_cast<Boat*>(v)) 
+            {
+                std::ostringstream out;
+                //форматируем сторку
+                out << std::fixed << std::setprecision(2) << boat->get_widthBoat();
+                return out.str();
+            }
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //helicopter->capacity
+        forPrintTable(m_vehicles, label_width + 9, data_width, "Hel->Грузопод.(т)", [](Transport* v) 
+        {
+            if (auto hel = dynamic_cast<Helicopter*>(v)) 
+            {
+                std::ostringstream out;
+                //форматируем сторку
+                out << std::fixed << std::setprecision(2) << hel->get_capacity();
+                return out.str();
+            }
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //hecilopter->enginePower
+        forPrintTable(m_vehicles, label_width + 10, data_width, "Hel->Мощность(лс)", [](Transport* v) 
+        {
+            if (auto heli = dynamic_cast<Helicopter*>(v)) 
+                return std::to_string(heli->get_enginePower());
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //spaceship->maxSpeed
+        forPrintTable(m_vehicles, label_width + 8, data_width, "Spa->Max скорость", [](Transport* v) 
+        {
+            if (auto spa = dynamic_cast<Spaceship*>(v)) 
+            {
+                std::ostringstream out;
+                //форматируем сторку
+                out << std::fixed << std::setprecision(2) << spa->get_maxSpeed();
+                return out.str();
+            }
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
+        //spaceship->hyperjumpRange
+        forPrintTable(m_vehicles, label_width + 11, data_width, "Spa->Дальность (ае)", [](Transport* v) 
+        {
+            if (auto spa = dynamic_cast<Spaceship*>(v)) 
+            {
+                std::ostringstream out;
+                //форматируем сторку
+                out << std::fixed << std::setprecision(2) << spa->get_hyperjumpRange();
+                return out.str();
+            }
+            return std::string("X");
+        });
+        //отрисовка границы
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+
     }
     catch (const std::exception &e)
     {
@@ -243,7 +241,7 @@ void Table::printTable() const
 }
 
 // создание
-std::unique_ptr<Transport>  Table::create_tr(
+Transport*  Table::create_tr(
     const std::string &typeTrans,
     const std::string &brandTrans,
     const std::string &modelTrans,
@@ -262,14 +260,16 @@ std::unique_ptr<Transport>  Table::create_tr(
                 yearTrans, 
                 weightTrans);
 
+            Transport* ptr = res.get(); 
             m_vehicles.push_back(std::move(res));
-            return std::move(res);
+            return ptr;
         }
         return nullptr;
     }
     catch (...)
     {
         std::cerr << "Неизвестная ошибка" << std::endl;
+        return nullptr;
     }
 }
 
@@ -286,12 +286,13 @@ void Table::create_addit_field_tr(const std::string& typeTrans,
     if(it)
     {
         std::cout << "Хотите заполнить дополнительные поля?\n";
-        std::cout << "1: Да\n 2: Нет" << std::endl;
-        bool answer;
-        std::cin >> answer;
+        std::cout << "1: Да\n0: Нет" << std::endl;
+        int answer = -1;
+        while (answer != 0 && answer != 1)
+            std::cin >> answer;
                 
         if (answer)
-            additMap[it->get_type()](it.get());        
+            it->edit();
     }
 }
 
@@ -305,9 +306,9 @@ void Table::delete_tr(int id)
 
         bool flag = false;
 
-        for (auto it = m_vehicles.begin(); it != m_vehicles.end(); it++)
+        for (auto it = m_vehicles.begin(); it != m_vehicles.end(); ++it)
         {
-            if (id == (*it)->get_id())
+            if ((*it)->get_id() == id)
             {
                 m_vehicles.erase(it);
                 flag = 1; // указываем, что нашли элемент
@@ -330,7 +331,7 @@ void Table::delete_tr(int id)
 }
 
 // редактирование
-void Table::edit_tr(int id)
+void Table::edit_tr(int id, int for_edit)
 {
     try
     {
@@ -342,45 +343,31 @@ void Table::edit_tr(int id)
 
         for (auto it = m_vehicles.begin(); it != m_vehicles.end(); ++it)
         {
-            if (id == (*it)->get_id())
+            if ((*it)->get_id() == id)
             {
-
-                int for_edit = -1;
-
-                while (for_edit != 0)
+                if (for_edit == 5) 
                 {
-
-                    std::cout << "Выберите: \n";
-                    std::cout << "1: Марка\n";
-                    std::cout << "2: Модель\n";
-                    std::cout << "3: Год\n";
-                    std::cout << "4: Вес\n";
-                    std::cout << "5: Доп. поля\n";
-                    std::cout << "0: Выход" << std::endl;
-
-                    while (for_edit < 0 || for_edit > 5)
-                        std::cin >> for_edit;
-
-                    if (for_edit == 5) 
-                    {
-                        additMap[(*it)->get_type()]((*it).get());
-                        continue;
-                    }
-
-                    if (for_edit != 0)
-                    {
-                    
-                        std::cout << "Введите изменение: " << std::endl;
-                        std::string editClassField;
-                        std::cin >> editClassField;
-
-                        editMap[for_edit - 1](editClassField, *it);
-
-                        for_edit = -1;
-                    }
+                   (*it)->edit();
                 }
 
-                flag = 1; // указываем, что нашли элемент
+                if (for_edit != 0 && for_edit != 5)
+                {
+                    std::cout << "Введите изменение: " << std::endl;
+                    std::string editClassField;
+                    std::cin >> editClassField;
+
+                    if (for_edit == 1 || for_edit == 2)
+                        editClassField[0] = std::toupper(editClassField[0]);
+
+                    //устанавливаем стратегию для редактирования поля
+                    m_context.setStrategy(m_mapForStrategy[for_edit]());
+
+                    //вызываем редактирование
+                    m_context.callEditStrategy(editClassField, *it);
+
+                }
+
+                flag = true; // указываем, что нашли элемент
                 break;
             }
         }
@@ -402,12 +389,25 @@ void Table::sort_tr(int for_sort)
 {
     try
     {
-        if (for_sort > 0 && for_sort < 15)
-        {
-            sortMap[for_sort - 1]();
-            printTable();
-            sortMap[0]();
-        }
+        auto it_strategy = m_mapForStrategy.find(for_sort);
+        //проверка на наличие стратегии
+        if (it_strategy == m_mapForStrategy.end())
+            throw std::logic_error("нет такой стратегии!");
+
+        //задаем стратегию для сортировки
+        m_context.setStrategy(it_strategy->second());
+
+        //вызываем сортировку по полю
+        m_context.callSortStrategy(m_vehicles);
+
+        //отрисовываем
+        printTable();
+
+        //ззадаем стратегию для сортировки по ID(возвращаем в исходное положение)
+        m_context.setStrategy(m_mapForStrategy[1]());
+        //вызываем сортировку по ID
+        m_context.callSortStrategy(m_vehicles);
+
     }
     catch (const std::exception &e)
     {
@@ -420,17 +420,32 @@ void Table::sort_tr(int for_sort)
 }
 
 // поиск
-void Table::find_tr(int for_find, const std::string& edit)
+void Table::find_tr(const std::string& edit, int for_find)
 {
     try
     {
         if (m_vehicles.empty())
             throw std::logic_error("Список пуст");
 
-        auto it = findMap[for_find - 1](edit);
-        if (it != m_vehicles.end())
+        auto it_strategy = m_mapForStrategy.find(for_find);
+        //проверка на наличие стратегии
+        if (it_strategy == m_mapForStrategy.end())
+            throw std::logic_error("нет такой стратегии!");
+
+        //устанавливаем стратегию
+        m_context.setStrategy(it_strategy->second());
+
+        //вызываем поиск по полю
+        std::vector<Transport*> vec = m_context.callFindStrategy(edit, m_vehicles);
+        
+        if(vec.empty())
         {
-            (*it)->info();
+            std::cerr << "Элемент не найдет!" << std::endl;
+            return;
+        }
+        for (const auto& it : vec)
+        {
+            it->info();
         }
     }
     catch (const std::exception &e)
@@ -444,11 +459,11 @@ void Table::find_tr(int for_find, const std::string& edit)
 }
 
 // сохранить в файл
-void Table::input_file(const std::string &name)
+void Table::writingFile(const std::string &name)
 {
     try
     {
-        WorkWithfile w(name);
+        WorkWithFile w(name);
         std::string result;
 
         for (auto& it : m_vehicles)
@@ -463,10 +478,8 @@ void Table::input_file(const std::string &name)
             result += " ";
             result += std::to_string(it->get_weight());
             result += " ";
-            result += std::to_string(it->get_weight());
-            result += " ";
-            saveMap[it->get_type()](it.get(), result);
-            w.in(result);
+            result += it->load_to_file();
+            w.inputToFile(result);
         }
     }
     catch (const std::exception &e)
@@ -480,16 +493,16 @@ void Table::input_file(const std::string &name)
 }
 
 // загрузить из файла
-void Table::output_file(const std::string &name)
+void Table::readingFile(const std::string &name)
 {
     try
     {
         std::string typeTrans, brandTrans, modelTrans;
         int yearTrans;
         double weightTrans;
-        WorkWithfile w(name);
+        WorkWithFile w(name);
         std::vector<std::string> v;     //вектор строк из файла(1 строка - 1 объект)
-        v = w.out();
+        v = w.outFromFile();        //получили вектор объектов-строк
 
         if (v.empty())
             throw std::runtime_error("Файл пустой");
@@ -500,8 +513,8 @@ void Table::output_file(const std::string &name)
             in >> typeTrans >> brandTrans >> modelTrans >> yearTrans >> weightTrans;
             auto it = create_tr(typeTrans, brandTrans, modelTrans, yearTrans, weightTrans);
             
-            if (!it)
-                loadMap[typeTrans](it.get(), in);
+            if (it)
+                it->read_from_file(in);
         }
     }
     catch (const std::exception &e)

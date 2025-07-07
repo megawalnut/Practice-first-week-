@@ -1,5 +1,8 @@
 #include "Helicopter.h"
 
+#include <iostream>
+#include <iomanip>
+
 // конструктор
 Helicopter::Helicopter(const std::string &brandTrans, const std::string &modelTrans, 
         int yearTrans, double weightTrans) : Transport(
@@ -45,7 +48,50 @@ int Helicopter::get_enginePower() const { return m_enginePower; }
 //set
 void Helicopter::set_capacity(double capacityTrans) { m_capacity = capacityTrans; }
 void Helicopter::set_enginePower(int enginePowerTrans) { m_enginePower = enginePowerTrans; }
-//info
-void Helicopter::info() const override {
 
+//для редактирования owners и mileage
+void Helicopter::edit()
+{
+	double capacityTrans;
+	int enginePowerTrans;
+	std::cout << "Введите грузоподъемность(т): \n";
+	std::cin >> capacityTrans;
+	std::cout << "Введите мощность(лс): \n";
+	std::cin >> enginePowerTrans;
+	set_capacity(capacityTrans);
+	set_enginePower(enginePowerTrans);
+}
+
+//для чтения доп. полей из файла
+void Helicopter::read_from_file(std::istream& in)
+{
+	double capacityTrans;
+	int enginePowerTrans;
+	if(!(in >> capacityTrans >> enginePowerTrans))
+	{    	
+		set_capacity(0.0);
+  		set_enginePower(0);
+		return;
+	}
+	set_capacity(capacityTrans);
+    set_enginePower(enginePowerTrans);
+}
+
+//для записи доп. полей в файл
+std::string Helicopter::load_to_file() const
+{
+    return std::to_string(get_capacity()) + " " + std::to_string(get_enginePower());
+}
+
+//для вывода информации
+void Helicopter::info() const
+{
+    std::cout << "ID: " << get_id() << "\n";
+    std::cout << "Тип: " << get_type() << "\n";
+    std::cout << "Марка: " << get_brand() << "\n";
+    std::cout << "Модель: " << get_model() << "\n";
+    std::cout << "Год: " << get_year() << "\n";
+    std::cout << "Вес: " << get_weight() << "\n";
+    std::cout << "Грузоподъемность(т): " << get_capacity() << "\n";
+    std::cout << "Мощность(лс): " << get_enginePower() << std::endl;
 }

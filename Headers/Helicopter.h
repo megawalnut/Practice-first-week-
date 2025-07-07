@@ -29,6 +29,15 @@ class Helicopter : public Transport {
 		void set_capacity(double capacityTrans);
 		void set_enginePower(int enginePowerTrans);
 
-		//информация об объекте
+		//для редактирования capacity и enginePower
+		void edit() override;
+
+		//для чтения доп. полей из файла
+		void read_from_file(std::istream& in) override;
+
+		//для записи доп. полей в файл
+		std::string load_to_file() const override;
+
+		//для вывода информации
 		void info() const override;
 };

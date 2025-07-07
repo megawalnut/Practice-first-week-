@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mike/my_projects/project_1/Headers -I/home/mike/my_projects/project_1/Headers/ForFactory
+CXX_INCLUDES = -I/home/mike/my_projects/project_1/Headers -I/home/mike/my_projects/project_1/Headers/ForFactory -I/home/mike/my_projects/project_1/Headers/ForStrategy
 
 CXX_FLAGS = -std=gnu++20
 

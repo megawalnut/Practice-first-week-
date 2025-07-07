@@ -1,5 +1,8 @@
 #include "Spaceship.h"
 
+#include <iostream>
+#include <iomanip>
+
 // конструктор
 Spaceship::Spaceship(const std::string &brandTrans, const std::string &modelTrans, 
         int yearTrans, double weightTrans) : Transport(
@@ -45,7 +48,50 @@ double Spaceship::get_hyperjumpRange() const { return m_hyperjumpRange; }
 //set
 void Spaceship::set_maxSpeed(double maxSpeedTrans) { m_maxSpeed = maxSpeedTrans; }
 void Spaceship::set_hyperjumpRange(double hyperjumpRangeTrans) { m_hyperjumpRange = hyperjumpRangeTrans; }
-//info
-void Spaceship::info() const override {
 
+//для редактирования owners и mileage
+void Spaceship::edit()
+{
+	double maxSpeedTrans;
+	double hyperjumpRangeTrans;
+	std::cout << "Введите макс скорость(км.с): \n";
+	std::cin >> maxSpeedTrans;
+	std::cout << "Введите дальность прыжка(а.е): \n";
+	std::cin >> hyperjumpRangeTrans;
+	set_maxSpeed(maxSpeedTrans);
+	set_hyperjumpRange(hyperjumpRangeTrans);
+}
+
+//для чтения доп. полей из файла
+void Spaceship::read_from_file(std::istream& in)
+{
+	double maxSpeedTrans;
+	double hyperjumpRangeTrans;
+	if(!(in >> maxSpeedTrans >> hyperjumpRangeTrans))
+	{    	
+		set_maxSpeed(0.0);
+  		set_hyperjumpRange(0);
+		return;
+	}
+	set_maxSpeed(maxSpeedTrans);
+    set_hyperjumpRange(hyperjumpRangeTrans);
+}
+
+//для записи доп. полей в файл
+std::string Spaceship::load_to_file() const
+{
+    return std::to_string(get_maxSpeed()) + " " + std::to_string(get_hyperjumpRange());
+}
+
+//для вывода информации
+void Spaceship::info() const
+{
+    std::cout << "ID: " << get_id() << "\n";
+    std::cout << "Тип: " << get_type() << "\n";
+    std::cout << "Марка: " << get_brand() << "\n";
+    std::cout << "Модель: " << get_model() << "\n";
+    std::cout << "Год: " << get_year() << "\n";
+    std::cout << "Вес: " << get_weight() << "\n";
+    std::cout << "Макс.скорость(км.с): " << get_maxSpeed() << "\n";
+    std::cout << "Дальность гиперпрыжка(а.е): " << get_hyperjumpRange() << std::endl;
 }

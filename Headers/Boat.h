@@ -30,6 +30,15 @@ class Boat : public Transport {
 		void set_lengthBoat(double lengthBoatTrans);
 		void set_widthBoat(double widthBoatTrans);
 
-		//информация об объекте
+		//для редактирования lengthBoat и widthBoat
+		void edit() override;
+
+		//для чтения доп. полей из файла
+		void read_from_file(std::istream& in) override;
+
+		//для записи доп. полей в файл
+		std::string load_to_file() const override;
+
+		//для вывода информации
 		void info() const override;
 };

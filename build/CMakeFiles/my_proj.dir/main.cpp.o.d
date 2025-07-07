@@ -207,6 +207,27 @@ CMakeFiles/my_proj.dir/main.cpp.o: \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.1.1/bits/fstream.tcc \
  /home/mike/my_projects/project_1/Headers/Table.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/Strategy.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/Context.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyId.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyType.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyBrand.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyModel.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyYear.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWeight.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyOwners.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyMileage.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyLengthBoat.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyWidthBoat.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyCapacity.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyEnginePower.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyMaxSpeed.h \
+ /home/mike/my_projects/project_1/Headers/ForStrategy/StrategyHyperjumpRange.h \
+ /usr/include/c++/15.1.1/map /usr/include/c++/15.1.1/bits/stl_tree.h \
+ /usr/include/c++/15.1.1/bits/node_handle.h \
+ /usr/include/c++/15.1.1/bits/stl_map.h \
+ /usr/include/c++/15.1.1/bits/stl_multimap.h \
+ /usr/include/c++/15.1.1/bits/erase_if.h \
  /usr/include/c++/15.1.1/algorithm \
  /usr/include/c++/15.1.1/bits/stl_algo.h \
  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
@@ -223,4 +244,12 @@ CMakeFiles/my_proj.dir/main.cpp.o: \
  /usr/include/libintl.h \
  /usr/include/c++/15.1.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/15.1.1/bits/locale_conv.h \
- /usr/include/c++/15.1.1/bits/quoted_string.h
+ /usr/include/c++/15.1.1/bits/quoted_string.h \
+ /usr/include/c++/15.1.1/functional \
+ /usr/include/c++/15.1.1/bits/std_function.h \
+ /usr/include/c++/15.1.1/unordered_map \
+ /usr/include/c++/15.1.1/bits/unordered_map.h \
+ /usr/include/c++/15.1.1/bits/hashtable.h \
+ /usr/include/c++/15.1.1/bits/hashtable_policy.h \
+ /usr/include/c++/15.1.1/bits/enable_special_members.h \
+ /usr/include/c++/15.1.1/array
