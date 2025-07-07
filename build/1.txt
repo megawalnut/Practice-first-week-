@@ -1,0 +1,5 @@
+Car Toyota Corolla 2015 1300 2 50000
+Boat Yamaha WaveRunner 2018 350 7 2.5
+Helicopter Bell 206 2010 1500 1000 500
+Spaceship SpaceX Falcon 2024 8000 300000 50
+Car Honda Civic 2017 1200 1 30000

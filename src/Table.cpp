@@ -22,8 +22,8 @@ Table::Table(std::unique_ptr<Strategy>&& otherStrategy) : m_context{std::move(ot
     {
         { 1, []() { return std::make_unique<StrategyId>(); } },
         { 2, []() { return std::make_unique<StrategyType>(); } },
-        { 3, []() { return std::make_unique<StrategyModel>(); } },
-        { 4, []() { return std::make_unique<StrategyBrand>(); } },
+        { 3, []() { return std::make_unique<StrategyBrand>(); } },
+        { 4, []() { return std::make_unique<StrategyModel>(); } },
         { 5, []() { return std::make_unique<StrategyYear>(); } },
         { 6, []() { return std::make_unique<StrategyWeight>(); } },
         { 7, []() { return std::make_unique<StrategyOwners>(); } },
@@ -66,7 +66,7 @@ void Table::printTable() const
         const int data_width = 15;   //Ширина для данных
 
 
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //ID
         forPrintTable(m_vehicles, label_width, data_width, "ID", [](Transport* v) 
@@ -74,7 +74,7 @@ void Table::printTable() const
             return std::to_string(v->get_id()); 
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //type
         forPrintTable(m_vehicles, label_width + 3, data_width, "Тип", [](Transport* v) 
@@ -82,7 +82,7 @@ void Table::printTable() const
             return v->get_type(); 
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //brand
         forPrintTable(m_vehicles, label_width + 5, data_width, "Марка", [](Transport* v) 
@@ -90,7 +90,7 @@ void Table::printTable() const
             return v->get_brand(); 
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //model
         forPrintTable(m_vehicles, label_width + 6, data_width, "Модель", [](Transport* v) 
@@ -98,7 +98,7 @@ void Table::printTable() const
             return v->get_model(); 
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //year
         forPrintTable(m_vehicles, label_width + 3, data_width, "Год", [](Transport* v) 
@@ -106,7 +106,7 @@ void Table::printTable() const
             return std::to_string(v->get_year()); 
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //weight
         forPrintTable(m_vehicles, label_width + 5, data_width, "Вес(кг)", [](Transport* v)
@@ -117,7 +117,7 @@ void Table::printTable() const
             return out.str(); 
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //car->owners
         forPrintTable(m_vehicles, label_width + 9, data_width, "Car->Владельцы",  [](Transport* v) 
@@ -127,7 +127,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
         
         //car->milaege
         forPrintTable(m_vehicles, label_width + 8, data_width, "Car->Пробег (км)", [](Transport* v) 
@@ -142,7 +142,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //boat->length
         forPrintTable(m_vehicles, label_width + 6, data_width, "Boa->Длина (м)", [](Transport* v) 
@@ -157,7 +157,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //boat->width
         forPrintTable(m_vehicles, label_width + 7, data_width, "Boa->Ширина (м)", [](Transport* v) 
@@ -172,7 +172,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //helicopter->capacity
         forPrintTable(m_vehicles, label_width + 9, data_width, "Hel->Грузопод.(т)", [](Transport* v) 
@@ -187,7 +187,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //hecilopter->enginePower
         forPrintTable(m_vehicles, label_width + 10, data_width, "Hel->Мощность(лс)", [](Transport* v) 
@@ -197,7 +197,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //spaceship->maxSpeed
         forPrintTable(m_vehicles, label_width + 8, data_width, "Spa->Max скорость", [](Transport* v) 
@@ -212,7 +212,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //spaceship->hyperjumpRange
         forPrintTable(m_vehicles, label_width + 11, data_width, "Spa->Дальность (ае)", [](Transport* v) 
@@ -227,7 +227,7 @@ void Table::printTable() const
             return std::string("X");
         });
         //отрисовка границы
-        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1, '-') << '\n';
+        std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
     }
     catch (const std::exception &e)
@@ -360,7 +360,7 @@ void Table::edit_tr(int id, int for_edit)
                         editClassField[0] = std::toupper(editClassField[0]);
 
                     //устанавливаем стратегию для редактирования поля
-                    m_context.setStrategy(m_mapForStrategy[for_edit]());
+                    m_context.setStrategy(m_mapForStrategy[for_edit + 2]());
 
                     //вызываем редактирование
                     m_context.callEditStrategy(editClassField, *it);
