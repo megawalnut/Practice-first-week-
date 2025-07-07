@@ -63,28 +63,28 @@ void Spaceship::set_hyperjumpRange(double hyperjumpRangeTrans) { m_hyperjumpRang
 //для редактирования owners и mileage
 void Spaceship::edit()
 {
-	double maxSpeedTrans;
-	double hyperjumpRangeTrans;
-	std::cout << "Введите макс скорость(км.с): \n";
-	std::cin >> maxSpeedTrans;
-	std::cout << "Введите дальность прыжка(а.е): \n";
-	std::cin >> hyperjumpRangeTrans;
-	set_maxSpeed(maxSpeedTrans);
-	set_hyperjumpRange(hyperjumpRangeTrans);
+    double maxSpeedTrans;
+    double hyperjumpRangeTrans;
+    std::cout << "Введите макс скорость(км.с): \n";
+    std::cin >> maxSpeedTrans;
+    std::cout << "Введите дальность прыжка(а.е): \n";
+    std::cin >> hyperjumpRangeTrans;
+    set_maxSpeed(maxSpeedTrans);
+    set_hyperjumpRange(hyperjumpRangeTrans);
 }
 
 //для чтения доп. полей из файла
 void Spaceship::read_from_file(std::istream& in)
 {
-	double maxSpeedTrans;
-	double hyperjumpRangeTrans;
-	if(!(in >> maxSpeedTrans >> hyperjumpRangeTrans))
-	{    	
-		set_maxSpeed(0.0);
-  		set_hyperjumpRange(0);
-		return;
-	}
-	set_maxSpeed(maxSpeedTrans);
+    double maxSpeedTrans;
+    double hyperjumpRangeTrans;
+    if(!(in >> maxSpeedTrans >> hyperjumpRangeTrans))
+    {        
+        set_maxSpeed(0.0);
+          set_hyperjumpRange(0);
+        return;
+    }
+    set_maxSpeed(maxSpeedTrans);
     set_hyperjumpRange(hyperjumpRangeTrans);
 }
 

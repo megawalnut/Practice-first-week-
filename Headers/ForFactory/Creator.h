@@ -15,7 +15,7 @@ class Creator
             const std::string& modelTrans, 
             int yearTrans, 
             double weightTrans) const = 0;
-
+    
         //деструктор
         virtual ~Creator() = default;
 };

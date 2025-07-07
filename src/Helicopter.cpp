@@ -63,28 +63,28 @@ void Helicopter::set_enginePower(int enginePowerTrans) { m_enginePower = engineP
 //для редактирования owners и mileage
 void Helicopter::edit()
 {
-	double capacityTrans;
-	int enginePowerTrans;
-	std::cout << "Введите грузоподъемность(т): \n";
-	std::cin >> capacityTrans;
-	std::cout << "Введите мощность(лс): \n";
-	std::cin >> enginePowerTrans;
-	set_capacity(capacityTrans);
-	set_enginePower(enginePowerTrans);
+    double capacityTrans;
+    int enginePowerTrans;
+    std::cout << "Введите грузоподъемность(т): \n";
+    std::cin >> capacityTrans;
+    std::cout << "Введите мощность(лс): \n";
+    std::cin >> enginePowerTrans;
+    set_capacity(capacityTrans);
+    set_enginePower(enginePowerTrans);
 }
 
 //для чтения доп. полей из файла
 void Helicopter::read_from_file(std::istream& in)
 {
-	double capacityTrans;
-	int enginePowerTrans;
-	if(!(in >> capacityTrans >> enginePowerTrans))
-	{    	
-		set_capacity(0.0);
-  		set_enginePower(0);
-		return;
-	}
-	set_capacity(capacityTrans);
+    double capacityTrans;
+    int enginePowerTrans;
+    if(!(in >> capacityTrans >> enginePowerTrans))
+    {        
+        set_capacity(0.0);
+          set_enginePower(0);
+        return;
+    }
+    set_capacity(capacityTrans);
     set_enginePower(enginePowerTrans);
 }
 

@@ -63,28 +63,28 @@ void Boat::set_widthBoat(double widthBoatTrans) { m_widthBoat = widthBoatTrans; 
 //для редактирования owners и mileage
 void Boat::edit()
 {
-	double lengthBoatTrans;
-	double widthBoatTrans;
-	std::cout << "Введите длину судна(м): \n";
-	std::cin >> lengthBoatTrans;
-	std::cout << "Введите ширину судна(м): \n";
-	std::cin >> widthBoatTrans;
-	set_lengthBoat(lengthBoatTrans);
-	set_widthBoat(widthBoatTrans);
+    double lengthBoatTrans;
+    double widthBoatTrans;
+    std::cout << "Введите длину судна(м): \n";
+    std::cin >> lengthBoatTrans;
+    std::cout << "Введите ширину судна(м): \n";
+    std::cin >> widthBoatTrans;
+    set_lengthBoat(lengthBoatTrans);
+    set_widthBoat(widthBoatTrans);
 }
 
 //для чтения доп. полей из файла
 void Boat::read_from_file(std::istream& in)
 {
-	double lengthBoatTrans;
-	double widthBoatTrans;
-	if(!(in >> lengthBoatTrans >> widthBoatTrans))
-	{    	
-		set_lengthBoat(0.0);
-  		set_widthBoat(0.0);
-		return;
-	}
-	set_lengthBoat(lengthBoatTrans);
+    double lengthBoatTrans;
+    double widthBoatTrans;
+    if(!(in >> lengthBoatTrans >> widthBoatTrans))
+    {        
+        set_lengthBoat(0.0);
+          set_widthBoat(0.0);
+        return;
+    }
+    set_lengthBoat(lengthBoatTrans);
     set_widthBoat(widthBoatTrans);
 }
 

@@ -7,20 +7,20 @@
 
 class WorkWithFile 
 {
-	private:
-		std::string m_fileName;	//имя файла
-		std::fstream m_file;	//поток для работы с файлом
+    private:
+        std::string m_fileName;    //имя файла
+        std::fstream m_file;    //поток для работы с файлом
 
-	public:
-		//конструктор
-		WorkWithFile(const std::string& name);
+    public:
+        //конструктор
+        WorkWithFile(const std::string& name);
 
-		//деструктор
-		~WorkWithFile() = default;
+        //деструктор
+        ~WorkWithFile() = default;
 
-		//запись
-		void inputToFile(const std::string& str);
-		
-		//чтение
-		std::vector<std::string> outFromFile(); 
+        //запись
+        void inputToFile(const std::string& str);
+        
+        //чтение
+        std::vector<std::string> outFromFile(); 
 };
