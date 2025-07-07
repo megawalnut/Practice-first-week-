@@ -2,7 +2,8 @@
 
 #include "Transport.h"
 
-class Helicopter : public Transport {
+class Helicopter : public Transport 
+{
 	private:
 		double m_capacity;		 //грузоподъемность
 		int m_enginePower;		 //мощность двигателя (в л.с.)
@@ -18,6 +19,7 @@ class Helicopter : public Transport {
 		//конструктор и оператор перемещения
 		Helicopter(Helicopter&& other) noexcept;
 		Helicopter& operator=(Helicopter&& other) noexcept;
+		
 		//деструктор
 		~Helicopter() = default;
 		

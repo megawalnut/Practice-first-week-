@@ -36,8 +36,9 @@
 #include <iomanip>
 #include <functional>
 
-class Table {
-	private:
+class Table 
+{
+    private:
 		
         using FindType = std::vector<std::unique_ptr<Transport>>::iterator;
 		using CreateType = std::unique_ptr<Creator>;
@@ -65,10 +66,10 @@ class Table {
 		//методы
 		//для отрисовки
 		void forPrintTable(const std::vector<std::unique_ptr<Transport>>& vehicles, 
-				const int width, 
-				const int data_width,
-				const std::string& label, 
-				std::function<std::string(Transport*)> get_value) const;
+			const int width, 
+			const int data_width,
+			const std::string& label, 
+			std::function<std::string(Transport*)> get_value) const;
 
 		//отрисовка
 		void printTable() const;
@@ -107,4 +108,3 @@ class Table {
 		//загрузить из файла
 		void readingFile(const std::string& name);
 };
-

@@ -6,7 +6,8 @@
 
 //фабричный метод
 //базовый класс
-class Creator {
+class Creator 
+{
     public:
         //создание дочернего объекта(Car, Boat ...)
         virtual std::unique_ptr<Transport> create(
@@ -15,5 +16,6 @@ class Creator {
             int yearTrans, 
             double weightTrans) const = 0;
 
+        //деструктор
         virtual ~Creator() = default;
 };

@@ -39,7 +39,7 @@ add_executable (my_proj
     src/ForStrategy/StrategyMaxSpeed.cpp
     src/ForStrategy/StrategyHyperjumpRange.cpp
 )
-
+ 
 #подключаем директории с заголовки 
 target_include_directories(my_proj PRIVATE
     ${CMAKE_SOURCE_DIR}/Headers

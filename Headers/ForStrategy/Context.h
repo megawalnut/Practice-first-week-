@@ -2,10 +2,12 @@
 
 #include "Strategy.h"
 
-class Context {
+class Context 
+{
     private:
         //объект интерфейса Strategy
         std::unique_ptr<Strategy> m_strategy;
+        
     public:
         //конструктор
         explicit Context(std::unique_ptr<Strategy>&& otherStrategy);
@@ -17,4 +19,7 @@ class Context {
         void callEditStrategy(std::string& editClassField, std::unique_ptr<Transport>& otherVehicles);
         //установка стратегии
         void setStrategy(std::unique_ptr<Strategy> otherStrategy);
+
+        //деструктор
+        ~Context() = default;
 };

@@ -36,6 +36,7 @@ int main()
 		std::cout << "8: Показать таблицу\n";
 		std::cout << "0: Выход" << std::endl;
 
+		//проверка на ввод
 		while (menu < 0 || menu > 8)
 			std::cin >> menu;
 
@@ -52,34 +53,48 @@ int main()
 			std::cout << "Spaceship\n";
 			std::cout << "Выйти - Null" << std::endl;
 
-			std::string typeTrans;
+			std::string typeTrans;	//тип
+
+			//вводим тип
 			std::cin >> typeTrans;
+
+			//с заглавной буквы
 			typeTrans[0] = std::toupper(typeTrans[0]);
 
+			//проверка типа
 			if (typeTrans == "Car" ||
 				typeTrans == "Boat" ||
 				typeTrans == "Helicopter" ||
-				typeTrans == "CaSpaceshipr") 
+				typeTrans == "Spaceshipr") 
 			{
-				std::string brandTrans;
-				std::string modelTrans;
-				int yearTrans;
-				double weightTrans;
+				std::string brandTrans;	//марка
+				std::string modelTrans;	//модель
+				int yearTrans;			//год
+				double weightTrans;		//вес
 
 				std::cout << "Введи марку: \n";
+				//вводим марку
 				std::cin >> brandTrans;
+
+				//с заглавной буквы
 				brandTrans[0] = std::toupper(brandTrans[0]);
 
 				std::cout << "Введи модель: \n";
+				//вводим модель
 				std::cin >> modelTrans;
+
+				//с заглавной буквы
 				modelTrans[0] = std::toupper(modelTrans[0]);
 
 				std::cout << "Введи год: \n";
+				//вводим год
 				std::cin >> yearTrans;
 
 				std::cout << "Введи вес(кг): \n";
+				//вводим вес
 				std::cin >> weightTrans;
 
+				//вызываем ф-цию создания
 				tb.create_addit_field_tr(typeTrans, brandTrans, modelTrans, yearTrans, weightTrans);
 			}
 			menu = -1;
@@ -89,8 +104,9 @@ int main()
 		{
 			// редактирование
 
-			int id;
+			int id;	//id объекта
 			std::cout << "Введите id объекта:" << std::endl;
+			//вводим id
 			std::cin >> id;
 
 			std::cout << "Выберите: \n";
@@ -101,10 +117,12 @@ int main()
             std::cout << "5: Доп. поля\n";
             std::cout << "0: Выход" << std::endl;
 
-			int for_edit = -1;
+			int for_edit = -1;	//для выбора поля
+			//проверка на вод
             while (for_edit < 0 || for_edit > 5)
                 std::cin >> for_edit;
 
+			//вызываем ф-цию редактирования
 			tb.edit_tr(id, for_edit);
 			menu = -1;
 			break;
@@ -113,10 +131,12 @@ int main()
 		{
 			// удаление
 
-			int id;
+			int id;	//id объекта
 			std::cout << "Введите id объекта" << std::endl;
+			//вводим id
 			std::cin >> id;
 
+			//вызываем ф-цию удаления
 			tb.delete_tr(id);
 			menu = -1;
 			break;
@@ -135,12 +155,15 @@ int main()
 			std::cout << "7: Доп. поля\n";
 			std::cout << "0: Выход" << std::endl;
 			
-			int for_sort = -1;
+			int for_sort = -1;	//для выбора поля
+			//проверка на ввод
 			while (for_sort < 0 || for_sort > 7)
 				std::cin >> for_sort;
 
+			//если не выбрали выход
 			if (for_sort != 0)
 			{
+				//если выбрали доп. поля
 				if (for_sort == 7) 
 				{
 					for_sort = -1;
@@ -158,10 +181,12 @@ int main()
 					std::cout << "\t13: Максимальная скорость(км/с)\n";
 					std::cout << "\t14: Дальность гиперпрыжка(а.е.)" << std::endl;
 
+					//проверка на ввод
 					while (for_sort < 7 || for_sort > 14)
 						std::cin >> for_sort;
 				}
 
+				//вызываем ф-цию сортировки
 				tb.sort_tr(for_sort);
 			}
 			menu = -1;
@@ -181,12 +206,15 @@ int main()
 			std::cout << "7: Доп. поля\n";
 			std::cout << "0: Выход" << std::endl;
 
-			int for_find = -1;
+			int for_find = -1;	//для выбора поля
+			//проверка на ввод
 			while (for_find < 0 || for_find > 8)
 				std::cin >> for_find;
 
+			//если не выбрали выход
 			if (for_find != 0)
 			{		
+				//если выбрали доп.поля
 				if (for_find == 7)
 				{
 					for_find = -1;
@@ -204,16 +232,20 @@ int main()
 					std::cout << "\t13: Максимальная скорость(км/с)\n";
 					std::cout << "\t14: Дальность гиперпрыжка(а.е.)" << std::endl;
 
+					//проверка на ввод
 					while (for_find < 7 || for_find > 14)
 						std::cin >> for_find;
 				}
 				std::cout << "Введите элемент: " << std::endl;
-				std::string edit;
+				std::string edit;	//для поиска по этой строке
+				//вводим
 				std::cin >> edit;
 
+				//с заглавной буквы 
 				if(for_find == 2 || for_find == 3 || for_find == 4)
 					edit[0] = std::toupper(edit[0]);
 
+				//вызываем ф-цию поиска
 				tb.find_tr(edit, for_find);
 			}
 
@@ -225,9 +257,11 @@ int main()
 			// сохранение в файл
 
 			std::cout << "Введите имя файла для сохранения: " << std::endl;
-			std::string name;
+			std::string name;	//имя файла для сохранения
+			//вводим
 			std::cin >> name;
 
+			//вызываем ф-цию записи в файл
 			tb.writingFile(name);
 			menu = -1;
 			break;
@@ -237,9 +271,11 @@ int main()
 			// запись из файла
 
 			std::cout << "Введите имя файла для чтения: " << std::endl;
-			std::string name;
+			std::string name;	//имя файла для чтения
+			//вводим
 			std::cin >> name;
 
+			//вызываем ф-цию чтения из файла
 			tb.readingFile(name);
 			menu = -1;
 			break;
@@ -248,12 +284,15 @@ int main()
 		{
 			// отрисовка
 
+			//вызываем ф-цию отрисовки таблицы
 			tb.printTable();
 			menu = -1;
 			break;
 		}
 		case 0:
 		{
+			//выход из меню
+
 			menu = 0;
 			break;
 		}

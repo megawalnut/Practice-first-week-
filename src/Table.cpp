@@ -11,6 +11,7 @@
 //конструктор
 Table::Table(std::unique_ptr<Strategy>&& otherStrategy) : m_context{std::move(otherStrategy)}
 {
+    //map для создания дочерних объектов Transport
     createMap = 
     {
         {"Car", [](){ return std::make_unique<CreateCar>();} },
@@ -18,6 +19,8 @@ Table::Table(std::unique_ptr<Strategy>&& otherStrategy) : m_context{std::move(ot
         {"Helicopter", [](){ return std::make_unique<CreateHelicopter>();} },
         {"Spaceship", [](){ return std::make_unique<CreateSpaceship>();} },
     };
+    
+    //map для создания дочерних объектов Strategy
     m_mapForStrategy = 
     {
         { 1, []() { return std::make_unique<StrategyId>(); } },
@@ -57,6 +60,7 @@ void Table::forPrintTable(const std::vector<std::unique_ptr<Transport>>& vehicle
     //перенос строки после завершения строки таблицы
     std::cout << "\n";
 }
+
 //отрисовка
 void Table::printTable() const
 {
@@ -65,7 +69,7 @@ void Table::printTable() const
         const int label_width = 20;  //ширина для полей
         const int data_width = 15;   //Ширина для данных
 
-
+        //отрисовка нижней границы таблицы
         std::cout << std::string(label_width + 3 + (data_width + 3) * m_vehicles.size() + 1 - 5, '-') << '\n';
 
         //ID
@@ -250,10 +254,13 @@ Transport*  Table::create_tr(
 {
     try
     {
+        //создаем объект фабричного метода
         auto creator = createMap[typeTrans]();
 
+        //если создали
         if (creator)
         {
+            //вызываем создание дочернего объекта Transport
             std::unique_ptr<Transport> res = creator->create(
                 brandTrans, 
                 modelTrans, 
@@ -280,18 +287,23 @@ void Table::create_addit_field_tr(const std::string& typeTrans,
     int yearTrans, 
     double weightTrans)
 {
-
+    //вызываем создание объекта
     auto it = create_tr(typeTrans, brandTrans, modelTrans, yearTrans, weightTrans);
 
+    //если создали
     if(it)
     {
         std::cout << "Хотите заполнить дополнительные поля?\n";
         std::cout << "1: Да\n0: Нет" << std::endl;
-        int answer = -1;
+        int answer = -1;    //для ввода доп. полей
+
+        //проверка на ввод
         while (answer != 0 && answer != 1)
             std::cin >> answer;
                 
+        //если хочет ввести
         if (answer)
+            //вызываем ф-цию ввода доп. полей
             it->edit();
     }
 }
@@ -301,22 +313,29 @@ void Table::delete_tr(int id)
 {
     try
     {
+        //проверка на пустой vector
         if (m_vehicles.empty())
             throw std::logic_error("Список пуст");
 
+        //флаг для обнаружения элемента
         bool flag = false;
 
+        //проход по контейнеру
         for (auto it = m_vehicles.begin(); it != m_vehicles.end(); ++it)
         {
+            //если нашли элемент
             if ((*it)->get_id() == id)
             {
+                //удаляем
                 m_vehicles.erase(it);
+
                 flag = 1; // указываем, что нашли элемент
                 std::cout << "Элемент удален" << std::endl;
                 break;
             }
         }
 
+        //если элемент не найден
         if (!flag)
             throw std::logic_error("Элемент не найден");
     }
@@ -335,30 +354,46 @@ void Table::edit_tr(int id, int for_edit)
 {
     try
     {
-
+        //проверка на пустой vector
         if (m_vehicles.empty())
             throw std::logic_error("Список пуст");
 
+        //флаг для обнаружения элемента
         bool flag = false;
 
+        //проход по контейнеру
         for (auto it = m_vehicles.begin(); it != m_vehicles.end(); ++it)
         {
+            //если нашли элемент
             if ((*it)->get_id() == id)
             {
+                //если редактирование доп. полей
                 if (for_edit == 5) 
                 {
+                    //вызываем ф-цию редактирования доп. полей
                    (*it)->edit();
                 }
 
+                //иначе редактируем основные поля
                 if (for_edit != 0 && for_edit != 5)
                 {
                     std::cout << "Введите изменение: " << std::endl;
-                    std::string editClassField;
+                    std::string editClassField; //строка для изменений
+                    //вводим
                     std::cin >> editClassField;
 
+                    //с заглавной буквы
                     if (for_edit == 1 || for_edit == 2)
                         editClassField[0] = std::toupper(editClassField[0]);
 
+                    //смотрим, есть ли в map необходимая стратегия
+                    auto it_strategy = m_mapForStrategy.find(for_edit + 2);
+
+                    //проверка на наличие стратегии
+                    if (it_strategy == m_mapForStrategy.end())
+                        throw std::logic_error("нет такой стратегии!");
+
+                        
                     //устанавливаем стратегию для редактирования поля
                     m_context.setStrategy(m_mapForStrategy[for_edit + 2]());
 
@@ -371,6 +406,8 @@ void Table::edit_tr(int id, int for_edit)
                 break;
             }
         }
+
+        //если элемент не найден
         if (!flag)
             throw std::logic_error("Элемент не найден");
     }
@@ -389,6 +426,7 @@ void Table::sort_tr(int for_sort)
 {
     try
     {
+        //смотрим, есть ли в map необходимая стратегия
         auto it_strategy = m_mapForStrategy.find(for_sort);
         //проверка на наличие стратегии
         if (it_strategy == m_mapForStrategy.end())
@@ -424,9 +462,11 @@ void Table::find_tr(const std::string& edit, int for_find)
 {
     try
     {
+        //проверка на пустой vector
         if (m_vehicles.empty())
             throw std::logic_error("Список пуст");
 
+        
         auto it_strategy = m_mapForStrategy.find(for_find);
         //проверка на наличие стратегии
         if (it_strategy == m_mapForStrategy.end())
@@ -438,13 +478,17 @@ void Table::find_tr(const std::string& edit, int for_find)
         //вызываем поиск по полю
         std::vector<Transport*> vec = m_context.callFindStrategy(edit, m_vehicles);
         
+        //проверка на пустой vector 
         if(vec.empty())
         {
             std::cerr << "Элемент не найдет!" << std::endl;
             return;
         }
+
+        //проход по контейнеру
         for (const auto& it : vec)
         {
+            //вызываем ф-цию вывода информации об объекте
             it->info();
         }
     }
@@ -463,11 +507,14 @@ void Table::writingFile(const std::string &name)
 {
     try
     {
-        WorkWithFile w(name);
-        std::string result;
+        //создаем объект для работы с файлом
+        WorkWithFile w(name);   //получает имя файла
+        std::string result;     //строка для записи объекта в файл
 
+        //проход по контейнеру
         for (auto& it : m_vehicles)
         {
+            //записываем все поля объекта(кроме id)
             result = it->get_type();
             result += " ";
             result += it->get_brand();
@@ -478,7 +525,11 @@ void Table::writingFile(const std::string &name)
             result += " ";
             result += std::to_string(it->get_weight());
             result += " ";
+
+            //вызываем ф-цию записи в строку доп. полей
             result += it->load_to_file();
+
+            //записываем строку в файл
             w.inputToFile(result);
         }
     }
@@ -497,23 +548,33 @@ void Table::readingFile(const std::string &name)
 {
     try
     {
+        //создаем поля для чтения из файла (Тип, Марка, Модельб Годб Вес)
         std::string typeTrans, brandTrans, modelTrans;
         int yearTrans;
         double weightTrans;
-        WorkWithFile w(name);
+        WorkWithFile w(name);   //создаем объект для работы с файлом
         std::vector<std::string> v;     //вектор строк из файла(1 строка - 1 объект)
         v = w.outFromFile();        //получили вектор объектов-строк
 
+        //проверка на пустой vector
         if (v.empty())
             throw std::runtime_error("Файл пустой");
 
+        //проход по контейнеру и запись каждого элемента в строку
         for (const std::string &line : v)
         {
+            //делаем из строки поток для чтения из строки
             std::istringstream in(line);
+            
+            //записываем данные в соответствующие поля 
             in >> typeTrans >> brandTrans >> modelTrans >> yearTrans >> weightTrans;
+
+            //вызываем ф-цию создания объекта
             auto it = create_tr(typeTrans, brandTrans, modelTrans, yearTrans, weightTrans);
             
+            //если создали
             if (it)
+                //вызываем ф-цию записи доп. полей из файла(если они есть)
                 it->read_from_file(in);
         }
     }

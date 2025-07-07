@@ -2,7 +2,8 @@
 
 #include <string>
 
-class Transport {
+class Transport 
+{
 	private:
 		static int m_for_id;	//для уникальности
 		int m_unique_id;		//уникальный id

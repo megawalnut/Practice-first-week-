@@ -5,17 +5,22 @@
 #include <string>
 #include <fstream>
 
-class WorkWithFile {
+class WorkWithFile 
+{
 	private:
-		std::string m_fileName;
-		std::fstream m_file;
+		std::string m_fileName;	//имя файла
+		std::fstream m_file;	//поток для работы с файлом
+
 	public:
 		//конструктор
 		WorkWithFile(const std::string& name);
+
 		//деструктор
-		~WorkWithFile();
+		~WorkWithFile() = default;
+
 		//запись
 		void inputToFile(const std::string& str);
+		
 		//чтение
 		std::vector<std::string> outFromFile(); 
 };

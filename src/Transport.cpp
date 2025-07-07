@@ -4,25 +4,31 @@
 #include <iomanip>
 
 //конструктор
-Transport::Transport(const std::string& typeTrans, const std::string& brandTrans, const std::string& modelTrans, int yearTrans, double weightTrans) :
-	m_unique_id{ m_for_id++ },
-	m_type{ typeTrans },
-	m_brand{ brandTrans },
-	m_model{ modelTrans },
-	m_year{ yearTrans },
-	m_weight{ weightTrans } {}
+Transport::Transport(const std::string& typeTrans, 
+					 const std::string& brandTrans, 
+					 const std::string& modelTrans, 
+					 int yearTrans, 
+					 double weightTrans) 
+    : m_unique_id{ m_for_id++ },
+	  m_type{ typeTrans },
+	  m_brand{ brandTrans },
+	  m_model{ modelTrans },
+	  m_year{ yearTrans },
+	  m_weight{ weightTrans } {}
 
 //конструктор и оператор копирования
-Transport::Transport(const Transport& other) :
-	m_unique_id{ m_for_id++ },
-	m_type{ other.m_type },
-	m_brand{ other.m_brand },
-	m_model{ other.m_model },
-	m_year{ other.m_year },
-	m_weight{ other.m_weight } {}
+Transport::Transport(const Transport& other)
+	: m_unique_id{ m_for_id++ },
+	  m_type{ other.m_type },
+	  m_brand{ other.m_brand },
+	  m_model{ other.m_model },
+	  m_year{ other.m_year },
+	  m_weight{ other.m_weight } {}
 
-Transport& Transport::operator=(const Transport& other) {
-	if (&other == this) {
+Transport& Transport::operator=(const Transport& other) 
+{
+	if (&other == this) 
+	{
 		return *this;
 	}
 
@@ -36,17 +42,21 @@ Transport& Transport::operator=(const Transport& other) {
 
 	return *this;
 }
+
 //конструктор и оператор перемещения
-Transport::Transport(Transport&& other) noexcept :
-	m_unique_id{ m_for_id++ },
-	m_type{ std::move(other.m_type) },
-	m_brand{ std::move(other.m_brand) },
-	m_model{ std::move(other.m_model) },
-	m_year{ std::move(other.m_year) },
-	m_weight{ std::move(other.m_weight) } {
+Transport::Transport(Transport&& other) noexcept
+	: m_unique_id{ m_for_id++ },
+	  m_type{ std::move(other.m_type) },
+	  m_brand{ std::move(other.m_brand) },
+	  m_model{ std::move(other.m_model) },
+	  m_year{ std::move(other.m_year) },
+	  m_weight{ std::move(other.m_weight) } {
 }
-Transport& Transport::operator=(Transport&& other) noexcept {
-	if (&other == this) {
+
+Transport& Transport::operator=(Transport&& other) noexcept 
+{
+	if (&other == this) 
+	{
 		return *this;
 	}
 

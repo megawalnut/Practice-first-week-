@@ -2,7 +2,8 @@
 
 #include "Transport.h"
 
-class Spaceship : public Transport {
+class Spaceship : public Transport 
+{
 	private:
 		double m_maxSpeed;		//макс. скорость км/c
 		double m_hyperjumpRange;	//дальность гиперпрыжка(а.е.)
@@ -19,6 +20,7 @@ class Spaceship : public Transport {
 		//конструктор и оператор перемещения
 		Spaceship(Spaceship&& other) noexcept;
 		Spaceship& operator=(Spaceship&& other) noexcept;
+		
 		//деструктор
 		~Spaceship() = default;
 			

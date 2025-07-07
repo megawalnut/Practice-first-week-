@@ -2,7 +2,8 @@
 
 #include "Transport.h"
 
-class Car : public Transport {
+class Car : public Transport 
+{
 	private:
 		int m_owners;		//число владельцев
 		double m_mileage;	//пробег
@@ -18,6 +19,7 @@ class Car : public Transport {
 		//конструктор и оператор перемещения
 		Car(Car&& other);
 		Car& operator=(Car&& other) noexcept;
+		
 		//деструктор
 		~Car() = default;
 

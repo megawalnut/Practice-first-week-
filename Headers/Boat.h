@@ -2,8 +2,9 @@
 
 #include "Transport.h"
 
-class Boat : public Transport {
-	private:
+class Boat : public Transport 
+{
+    private:
 		double m_lengthBoat;	//длина судна
 		double m_widthBoat;		//ширина судна
 
@@ -19,6 +20,7 @@ class Boat : public Transport {
 		//конструктор и оператор перемещения
 		Boat(Boat&& other) noexcept;
 		Boat& operator=(Boat&& other) noexcept;
+		
 		//деструктор
 		~Boat() = default;
 		
